@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+outputs/*
+!outputs/.gitkeep
+data/input/*
+!data/input/README.md
+!data/input/smoke.txt

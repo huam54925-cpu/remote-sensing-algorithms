@@ -1,0 +1,35 @@
+{
+  "name": "remote-sensing-framework",
+  "description": "批处理框架；smoke 仅验证输入读取和输出写入。遥感算法待接入。",
+  "version": "0.1.0",
+  "image": "REPLACE_WITH_REGISTRY_IMAGE_AND_DIGEST",
+  "base_image": "REPLACE_WITH_VERIFIED_PYTHON_SLIM_AND_DIGEST",
+  "command": [
+    "python",
+    "-m",
+    "rs_container"
+  ],
+  "resources": {
+    "requests": {
+      "cpu": "250m",
+      "memory": "128Mi"
+    },
+    "limits": {
+      "cpu": "1",
+      "memory": "512Mi"
+    }
+  },
+  "auto_remove": true,
+  "working_dir": "/app",
+  "volumes": [
+    "REPLACE_INPUT:/data/input:ro",
+    "REPLACE_OUTPUT:/data/output:rw"
+  ],
+  "environments": [
+    "RS_ALGORITHM=smoke",
+    "RS_INPUT=/data/input/smoke.txt",
+    "RS_OUTPUT_DIR=/data/output",
+    "RS_PARAMS={}"
+  ],
+  "timeout_seconds": 300
+}

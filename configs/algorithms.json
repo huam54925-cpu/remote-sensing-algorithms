@@ -1,0 +1,98 @@
+{
+  "source_file": "ç__æµ_å__ç__ç®_æ³_æ¸_å__.xlsx",
+  "source_sha256": "82196b58ed0ecfe5a4d47bf679aba690476db70991ae648740ea7ede97b68b1c",
+  "sheet": "遥感指数算法",
+  "algorithms": [
+    {
+      "id": 1,
+      "name": "kNDVI（Kernel Normalized Difference Vegetation Index）核归一化植被指数",
+      "description": "利用核函数增强植被光谱非线性特征表达，提高植被覆盖、长势变化和生态参数时序分析能力",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 2,
+      "name": "EVI（Enhanced Vegetation Index）增强植被指数",
+      "description": "降低大气和土壤背景影响，提升高植被覆盖区域的植被信息提取和分类效果",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 3,
+      "name": "SAVI（土壤调节植被指数）",
+      "description": "削弱裸土背景干扰，提高稀疏植被区域的植被识别和动态监测能力",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 4,
+      "name": "MNDWI（Modified Normalized Difference Water Index）改进归一化水体指数",
+      "description": "增强水体光谱特征并抑制建筑物影响，实现河流、湖泊和湿地提取",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 5,
+      "name": "AWEI（Automated Water Extraction Index）自动水体提取指数",
+      "description": "强化复杂背景下水体识别能力，适用于山区、城市等复杂区域水体分类",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 6,
+      "name": "NDBI（Normalized Difference Built-up Index）归一化建筑指数",
+      "description": "突出人工建筑地表特征，用于城市建设用地识别和城市扩张分析",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 7,
+      "name": "NBR（Normalized Burn Ratio）归一化燃烧指数",
+      "description": "识别火烧迹地和植被扰动区域，用于森林火灾影响评估与恢复监测",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 8,
+      "name": "BSI（Bare Soil Index）裸土指数",
+      "description": "增强裸露土壤和裸地光谱差异，辅助土地覆盖分类和地表变化检测",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 9,
+      "name": "NDMI（Normalized Difference Moisture Index）归一化水分指数",
+      "description": "反映植被和地表水分变化，用于干旱监测和生态环境评价",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 10,
+      "name": "LSWI（Land Surface Water Index）地表水分指数",
+      "description": "结合短波红外信息表征植被含水量和湿地生态变化",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 11,
+      "name": "FVC（Fractional Vegetation Cover）植被覆盖度",
+      "description": "估算像元尺度植被覆盖比例，用于生态质量评价和长期变化分析",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 12,
+      "name": "NDSI（Normalized Difference Snow Index）归一化积雪指数",
+      "description": "增强积雪光谱特征，实现冰雪覆盖范围识别和季节变化监测",
+      "status": "not_implemented",
+      "formula": null
+    },
+    {
+      "id": 13,
+      "name": "NDGI（Normalized Difference Greenness Index）归一化绿度指数",
+      "description": "增强绿色植被区域光谱差异，用于植被分类和生态变化监测",
+      "status": "not_implemented",
+      "formula": null
+    }
+  ]
+}

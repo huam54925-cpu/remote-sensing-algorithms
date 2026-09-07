@@ -1,0 +1,1 @@
+{"timestamp": "2026-09-07T12:58:51.679407+00:00", "level": "INFO", "module": "rs_container", "task_id": "25faef39-412f-47a3-850a-08d5dd4771c7", "message": "framework_smoke_completed", "elapsed_seconds": 0.07589992499970322, "process_peak_rss_kib": 20692, "bytes": 39}

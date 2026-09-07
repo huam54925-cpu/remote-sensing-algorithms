@@ -1,0 +1,8 @@
+**
+!Dockerfile
+!requirements.lock
+!src/
+!src/**
+!scripts/
+!scripts/healthcheck.sh
+**/__pycache__/

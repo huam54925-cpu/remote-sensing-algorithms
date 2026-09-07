@@ -1,0 +1,46 @@
+# 未在 Kubernetes 验证。先替换镜像/PVC，输入 PVC 须含 smoke.txt。
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: remote-sensing-framework-smoke
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 300
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: algorithm
+          image: REPLACE_WITH_REGISTRY_IMAGE_AND_DIGEST
+          args: ["--algorithm", "smoke", "--input", "/data/input/smoke.txt", "--output-dir", "/data/output/smoke-run-001"]
+          securityContext:
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "128Mi"
+            limits:
+              cpu: "1"
+              memory: "512Mi"
+          volumeMounts:
+            - {name: input, mountPath: /data/input, readOnly: true}
+            - {name: output, mountPath: /data/output}
+            - {name: tmp, mountPath: /tmp}
+      volumes:
+        - name: input
+          persistentVolumeClaim: {claimName: REPLACE_INPUT_PVC}
+        - name: output
+          persistentVolumeClaim: {claimName: REPLACE_OUTPUT_PVC}
+        - name: tmp
+          emptyDir: {medium: Memory, sizeLimit: 64Mi}
