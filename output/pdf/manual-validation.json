@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "revision": "1.1",
+  "pages": 42,
+  "chapters": 12,
+  "command_blocks": 28,
+  "terminal_output_blocks": 31,
+  "bash_syntax": "PASS",
+  "embedded_python_syntax": "PASS",
+  "markdown_commands_match_latex": true,
+  "all_pages_have_text": true,
+  "missing_glyphs_or_overfull_boxes": false,
+  "visual_page_review": false,
+  "operational_commands_executed": false
+}
