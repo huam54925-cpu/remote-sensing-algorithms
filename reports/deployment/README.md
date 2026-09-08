@@ -24,6 +24,8 @@ Docker 实测小样本 90×90、两波段、8099 有效像元：进程总耗时�
 
 ## 安全与 GPU 限制
 
+**后续更新：用户安装 Toolkit 1.20.0 并配置 Docker 后，容器 nvidia-smi、CUDA 驱动初始化、设备枚举及三轮真实 GPU 向量加法已通过（每轮 1048583 元素，误差为 0）；Kubernetes 节点仍为 Ready。详见 gpu-followup/README.md。下文 GPU 失败记录描述首次交付时状态。**
+
 Trivy 0.74.0，扫描库更新时间 2026-09-07 19:06 UTC，扫描时尚未到 NextUpdate。报告仍有 47 HIGH、3 CRITICAL（50 条软件包-漏洞记录、18 个不同漏洞编号），此次记录均未给 FixedVersion；扫描退出 2，无忽略规则。与旧版记录数量相同不等于安全。原始报告见 security/scan.json；不得标记为无高危或正式合规交付。
 
 宿主 GTX 1650 / 4 GiB / 驱动 595.84 可被 nvidia-smi 识别；Docker --gpus all 实测失败：无法选择具备 GPU 能力的设备驱动，见 gpu-probe.txt。本次未安装 NVIDIA Container Toolkit，GPU 运算尚未验证。两个示例只使用 CPU。
