@@ -5,4 +5,10 @@
 !src/**
 !scripts/
 !scripts/healthcheck.sh
+!deps/
+!deps/debs/
+!deps/debs/*.deb
+!deps/debs/SHA256SUMS
+deps/debs/partial
+deps/debs/lock
 **/__pycache__/

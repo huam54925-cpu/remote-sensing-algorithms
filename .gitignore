@@ -5,3 +5,8 @@ outputs/*
 data/input/*
 !data/input/README.md
 !data/input/smoke.txt
+images/
+work/
+.env
+.env.*
+!.env.example

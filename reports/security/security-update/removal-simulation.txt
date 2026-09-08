@@ -1,0 +1,28 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ apt : Depends: libapt-pkg7.0 (>= 3.0.3) but it is not going to be installed
+       Depends: libsystemd0 but it is not going to be installed
+ bsdutils : PreDepends: libsystemd0 (>= 254) but it is not going to be installed
+            Recommends: bsdextrautils but it is not installable
+ coreutils : PreDepends: libacl1 (>= 2.2.23) but it is not going to be installed
+             PreDepends: libsystemd0 (>= 254) but it is not going to be installed
+ login : Depends: libpam-modules but it is not going to be installed
+         Depends: libpam-runtime but it is not going to be installed
+ sed : PreDepends: libacl1 (>= 2.2.23) but it is not going to be installed
+ tar : PreDepends: libacl1 (>= 2.2.23) but it is not going to be installed
+E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.
+E: The following information from --solver 3.0 may provide additional context:
+   Unable to satisfy dependencies. Reached two conflicting decisions:
+   1. libacl1:amd64 is selected for removal
+   2. libacl1:amd64 is selected for install because:
+      1. coreutils:amd64 is selected for install
+      2. coreutils:amd64 PreDepends libacl1 (>= 2.2.23)

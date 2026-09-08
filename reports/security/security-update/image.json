@@ -1,0 +1,70 @@
+[
+    {
+        "Id": "sha256:340633d53497354e3df67a42d65fb65398217ad3845695b926806e9b0b0ab608",
+        "RepoTags": [
+            "remote-sensing-framework:0.2.1-security1"
+        ],
+        "RepoDigests": [
+            "remote-sensing-framework@sha256:340633d53497354e3df67a42d65fb65398217ad3845695b926806e9b0b0ab608"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-08T02:46:13.435084376+01:00",
+        "Config": {
+            "User": "10001:10001",
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.13.15",
+                "PYTHON_SHA256=1e66a7945a48390ee4c2a4268a0e4185884059a13c4aab6d148aa208deea4a76",
+                "PYTHONUNBUFFERED=1",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONPATH=/app/src",
+                "HOME=/tmp"
+            ],
+            "Entrypoint": [
+                "python",
+                "-m",
+                "rs_container"
+            ],
+            "Cmd": [
+                "--help"
+            ],
+            "WorkingDir": "/app",
+            "Labels": {
+                "org.opencontainers.image.description": "MNDWI GeoTIFF batch example",
+                "org.opencontainers.image.revision": "security1",
+                "org.opencontainers.image.title": "Remote sensing MNDWI batch example",
+                "org.opencontainers.image.version": "0.2.1"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 107209219,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:411a86676185cb54d695a805b238194a64e9b77e0c723f3802fbb87d333ea0b3",
+                "sha256:ac03b9b8028ef885548e0abeafdd0c0c548a6821ba7463e55a8505e985bb81f4",
+                "sha256:6b1273b0d0edb3eeba426ec54c7409396d83b82aaee569e49b1000e392ea292b",
+                "sha256:748b8823d6d330abbbd313c17773ac291f00c257bc2a78467bb8d0a22c010360",
+                "sha256:5e4e6e0c95ca6796b2e992c0b1d2ab4520827d41cbf0c818045846e8235a8644",
+                "sha256:cac77ff0bc9a638a2e071203aed6213d4b9a34d0ad072ccc2b0dcc8cf906edbd",
+                "sha256:beda38d8210a5221c2d0065f52926cb0c07e81479d88a353523fe253451a36eb",
+                "sha256:9a0db9d6c8dd37ffb1d5fa3bcfd5f80f4d3e07565685a264c7c394ed311615bd",
+                "sha256:8242ac46093edacce435357f25a950b2504682575884e849d0b01b7731841878",
+                "sha256:828e75845316e8a2c0ce62c89bf461210ccd1f41a08f4dfff45431d4082ce50c",
+                "sha256:1cfb7c17a6a059d43c6d1d59067f8f487d29a806bed4db33ba8e5bc6c331788a",
+                "sha256:8f7ab357cbf3a9cbbd07fe298a1c1b3ec5a1c637aae7b46ea33318cb83b6a734"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-09-08T01:46:30.412461791Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:340633d53497354e3df67a42d65fb65398217ad3845695b926806e9b0b0ab608",
+            "size": 856
+        }
+    }
+]

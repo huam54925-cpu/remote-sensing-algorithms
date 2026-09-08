@@ -1,0 +1,1 @@
+{"timestamp": "2026-09-08T01:47:30.021291+00:00", "level": "INFO", "module": "rs_container", "task_id": "def3104f-3318-4f9f-a674-fd45ca7aedd2", "message": "algorithm_completed", "algorithm": "MNDWI", "elapsed_seconds": 1.9508401690000028, "process_peak_rss_kib": 77484, "output": "/data/output/mndwi.tif", "valid_pixels": 4, "invalid_pixels": 2, "formula": "(G-S1)/(G+S1)"}
