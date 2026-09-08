@@ -1,0 +1,103 @@
+{
+  "root": "/mnt/robot_disk/remote_sensing_project/src",
+  "warning": "静态线索不是实际运行证据；未执行源代码",
+  "dependencies": [],
+  "hints": [
+    {
+      "file": "rs_container/mndwi.py",
+      "line": 31,
+      "category": "file_io"
+    },
+    {
+      "file": "rs_container/mndwi.py",
+      "line": 49,
+      "category": "file_io"
+    },
+    {
+      "file": "rs_container/kmeans.py",
+      "line": 3,
+      "category": "network"
+    },
+    {
+      "file": "rs_container/kmeans.py",
+      "line": 25,
+      "category": "file_io"
+    },
+    {
+      "file": "rs_container/kmeans.py",
+      "line": 46,
+      "category": "file_io"
+    },
+    {
+      "file": "rs_container/kmeans.py",
+      "line": 50,
+      "category": "gpu"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 2,
+      "category": "entrypoint"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 24,
+      "category": "stop"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 28,
+      "category": "stop"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 29,
+      "category": "stop"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 34,
+      "category": "entrypoint"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 127,
+      "category": "file_io"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 139,
+      "category": "file_io"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 151,
+      "category": "stop"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 152,
+      "category": "stop"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 154,
+      "category": "stop"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 161,
+      "category": "entrypoint"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 162,
+      "category": "stop"
+    },
+    {
+      "file": "rs_container/__main__.py",
+      "line": 163,
+      "category": "stop"
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "name": "affine",
+    "version": "3.0.1"
+  },
+  {
+    "name": "attrs",
+    "version": "26.1.0"
+  },
+  {
+    "name": "certifi",
+    "version": "2026.7.22"
+  },
+  {
+    "name": "click",
+    "version": "8.5.0"
+  },
+  {
+    "name": "cloudpickle",
+    "version": "3.1.2"
+  },
+  {
+    "name": "joblib",
+    "version": "1.6.0"
+  },
+  {
+    "name": "narwhals",
+    "version": "2.25.0"
+  },
+  {
+    "name": "numpy",
+    "version": "2.5.3"
+  },
+  {
+    "name": "pyparsing",
+    "version": "3.3.2"
+  },
+  {
+    "name": "rasterio",
+    "version": "1.5.1"
+  },
+  {
+    "name": "scikit-learn",
+    "version": "1.9.0"
+  },
+  {
+    "name": "scipy",
+    "version": "1.18.1"
+  },
+  {
+    "name": "threadpoolctl",
+    "version": "3.6.0"
+  }
+]

@@ -1,0 +1,1 @@
+{"status": "PASS", "records": "/mnt/robot_disk/remote_sensing_project/reports/deployment/k8s-1788864716", "jobs": ["rs-example-1788864716-0", "rs-example-1788864716-1"], "cancelled": "rs-cancel-1788864716"}

@@ -28,8 +28,8 @@
       "id": 4,
       "name": "MNDWI（Modified Normalized Difference Water Index）改进归一化水体指数",
       "description": "增强水体光谱特征并抑制建筑物影响，实现河流、湖泊和湿地提取",
-      "status": "not_implemented",
-      "formula": null
+      "status": "implemented_example",
+      "formula": "(G-S1)/(G+S1)"
     },
     {
       "id": 5,
@@ -93,6 +93,14 @@
       "description": "增强绿色植被区域光谱差异，用于植被分类和生态变化监测",
       "status": "not_implemented",
       "formula": null
+    }
+  ],
+  "additional_examples": [
+    {
+      "name": "KMEANS",
+      "status": "implemented_example",
+      "source": "https://scikit-learn.org/stable/auto_examples/cluster/plot_mini_batch_kmeans.html",
+      "note": "新增封装验证示例，不属于原始 Excel 算法清单"
     }
   ]
 }

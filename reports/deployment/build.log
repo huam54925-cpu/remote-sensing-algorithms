@@ -1,0 +1,99 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.10kB done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.13-slim-trixie@sha256:9d2e5553305c7c7b0097999bb17187c69b921ccd6bc9d40e4bb5ebe652c00285
+#2 DONE 0.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 260B done
+#3 DONE 0.2s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [build 1/7] FROM docker.io/library/python:3.13-slim-trixie@sha256:9d2e5553305c7c7b0097999bb17187c69b921ccd6bc9d40e4bb5ebe652c00285
+#5 resolve docker.io/library/python:3.13-slim-trixie@sha256:9d2e5553305c7c7b0097999bb17187c69b921ccd6bc9d40e4bb5ebe652c00285
+#5 resolve docker.io/library/python:3.13-slim-trixie@sha256:9d2e5553305c7c7b0097999bb17187c69b921ccd6bc9d40e4bb5ebe652c00285 0.4s done
+#5 DONE 0.5s
+
+#4 [internal] load build context
+#4 transferring context: 686B done
+#4 DONE 0.1s
+
+#6 [build 4/7] COPY requirements.lock /build/requirements.lock
+#6 CACHED
+
+#7 [build 2/7] WORKDIR /build
+#7 CACHED
+
+#8 [build 3/7] COPY src/ /build/src/
+#8 CACHED
+
+#9 [build 5/7] RUN python -m pip install --no-cache-dir --prefix=/install -r /build/requirements.lock &&     PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/build/src:/install/lib/python3.13/site-packages     python -m rs_container --healthcheck
+#9 CACHED
+
+#10 [build 6/7] COPY deps/python-transitive.lock /build/python-transitive.lock
+#10 DONE 1.8s
+
+#11 [build 7/7] RUN python -m pip install --no-cache-dir --no-deps --prefix=/install -r /build/python-transitive.lock
+#11 5.922 Collecting narwhals==2.25.0 (from -r /build/python-transitive.lock (line 2))
+#11 6.890   Downloading narwhals-2.25.0-py3-none-any.whl.metadata (15 kB)
+#11 7.211 Collecting cloudpickle==3.1.2 (from -r /build/python-transitive.lock (line 3))
+#11 7.392   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+#11 7.576 Downloading narwhals-2.25.0-py3-none-any.whl (467 kB)
+#11 9.825 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+#11 9.982 Installing collected packages: narwhals, cloudpickle
+#11 11.94 
+#11 11.95 Successfully installed cloudpickle-3.1.2 narwhals-2.25.0
+#11 11.95 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#11 DONE 12.9s
+
+#12 [runtime 4/9] RUN cd /tmp/system-debs && sha256sum -c SHA256SUMS &&     dpkg -i ./*.deb && apt-get purge -y mount &&     rm -rf /tmp/system-debs /var/lib/apt/lists/*
+#12 CACHED
+
+#13 [runtime 2/9] WORKDIR /app
+#13 CACHED
+
+#14 [runtime 3/9] COPY deps/debs/ /tmp/system-debs/
+#14 CACHED
+
+#15 [runtime 5/9] COPY --from=build /build/src/ /app/src/
+#15 CACHED
+
+#16 [runtime 6/9] COPY --from=build /install/ /usr/local/
+#16 DONE 10.1s
+
+#17 [runtime 7/9] RUN python -c 'import rasterio, numpy, sklearn, ssl, sqlite3; print(rasterio.__version__)' &&     python -m pip uninstall -y pip
+#17 9.455 1.5.1
+#17 15.89 Found existing installation: pip 26.2.1
+#17 16.06 Uninstalling pip-26.2.1:
+#17 16.66   Successfully uninstalled pip-26.2.1
+#17 16.74 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#17 DONE 25.1s
+
+#18 [runtime 8/9] COPY scripts/healthcheck.sh /app/healthcheck.sh
+#18 DONE 6.3s
+
+#19 [runtime 9/9] RUN test -x /bin/sh && mkdir -p /data/input /data/output /data/work && chmod 755 /app/healthcheck.sh
+#19 DONE 2.9s
+
+#20 exporting to image
+#20 exporting layers
+#20 exporting layers 79.0s done
+#20 exporting manifest sha256:fe20a3d62f9d775322654670ee8be206045d8d43676f38e36388967168731ae9
+#20 exporting manifest sha256:fe20a3d62f9d775322654670ee8be206045d8d43676f38e36388967168731ae9 0.3s done
+#20 exporting config sha256:b0516c07addd81b85977eb8cf40eef69470058a821fbc8d35b15b71e91b323e2
+#20 exporting config sha256:b0516c07addd81b85977eb8cf40eef69470058a821fbc8d35b15b71e91b323e2 0.3s done
+#20 exporting attestation manifest sha256:35e6756f9dad5c9952a38de07938e27069e5199606a331e9a3f3a4727a2d3a0c
+#20 exporting attestation manifest sha256:35e6756f9dad5c9952a38de07938e27069e5199606a331e9a3f3a4727a2d3a0c 0.5s done
+#20 exporting manifest list sha256:e9bcee28fc600022a4a919897528e703e1c30d14730b32679c57a4c9a7ea3c89
+#20 exporting manifest list sha256:e9bcee28fc600022a4a919897528e703e1c30d14730b32679c57a4c9a7ea3c89 0.4s done
+#20 naming to docker.io/library/remote-sensing-framework:0.3.0-kmeans1
+#20 naming to docker.io/library/remote-sensing-framework:0.3.0-kmeans1 0.1s done
+#20 unpacking to docker.io/library/remote-sensing-framework:0.3.0-kmeans1
+#20 unpacking to docker.io/library/remote-sensing-framework:0.3.0-kmeans1 16.0s done
+#20 DONE 96.9s
+remote-sensing-framework:0.3.0-kmeans1

@@ -1,0 +1,2 @@
+{"timestamp": "2026-09-08T10:52:54.700552+00:00", "level": "INFO", "module": "rs_container", "task_id": "6274459f-2ca5-40e1-a1e4-d7ae2185a2e1", "message": "algorithm_started", "algorithm": "KMEANS"}
+{"timestamp": "2026-09-08T10:53:01.225864+00:00", "level": "WARNING", "module": "rs_container", "task_id": "6274459f-2ca5-40e1-a1e4-d7ae2185a2e1", "message": "task_cancelled", "signal": 15}

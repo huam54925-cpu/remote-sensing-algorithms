@@ -1,0 +1,26 @@
+test_mndwi_values (test_algorithms.AlgorithmTests.test_mndwi_values) ... /usr/local/lib/python3.13/site-packages/rasterio/transform.py:178: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+  return Affine.translation(west, north) * Affine.scale(xsize, -ysize)
+ok
+test_reference_and_metadata (test_algorithms.AlgorithmTests.test_reference_and_metadata) ... /usr/local/lib/python3.13/site-packages/rasterio/transform.py:178: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+  return Affine.translation(west, north) * Affine.scale(xsize, -ysize)
+ok
+test_validation_and_no_partial_result (test_algorithms.AlgorithmTests.test_validation_and_no_partial_result) ... /usr/local/lib/python3.13/site-packages/rasterio/transform.py:178: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+  return Affine.translation(west, north) * Affine.scale(xsize, -ysize)
+ok
+test_environment_and_cli_override (test_cli.InterfaceTests.test_environment_and_cli_override) ... ok
+test_existing_result_not_overwritten (test_cli.InterfaceTests.test_existing_result_not_overwritten) ... ok
+test_health (test_cli.InterfaceTests.test_health) ... ok
+test_help (test_cli.InterfaceTests.test_help) ... ok
+test_invalid_params (test_cli.InterfaceTests.test_invalid_params) ... ok
+test_missing_arguments (test_cli.InterfaceTests.test_missing_arguments) ... ok
+test_missing_input (test_cli.InterfaceTests.test_missing_input) ... ok
+test_output_is_file (test_cli.InterfaceTests.test_output_is_file) ... ok
+test_pending_algorithms (test_cli.InterfaceTests.test_pending_algorithms) ... ok
+test_smoke_and_logs (test_cli.InterfaceTests.test_smoke_and_logs) ... ok
+test_unknown_algorithm (test_cli.InterfaceTests.test_unknown_algorithm) ... ok
+test_literal_and_unknown (test_env_config.EnvTests.test_literal_and_unknown) ... skipped 'host-side configuration test'
+
+----------------------------------------------------------------------
+Ran 15 tests in 70.637s
+
+OK (skipped=1)

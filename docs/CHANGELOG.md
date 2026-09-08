@@ -1,5 +1,9 @@
 # 变更日志
 
+## 0.3.0 — 2026-09-08
+
+新增 CPU KMEANS GeoTIFF 示例、独立结果对比、字面 env 加载、命名任务停止、信号清理及临时结果提交。MNDWI/KMEANS 最终输出迁移至 result/，增加 success.json，调用方需更新路径。增加离线交付打包、算法接收静态线索检查及数据盘 kind 集成测试。实际测试与扫描结论见 reports/deployment/README.md。
+
 ## 0.2.1 — 2026-09-08
 
 安全更新：固定 Python 3.13.15 / Debian 13.6 基础镜像摘要，升级 Expat 至 2.8.3-1~deb13u1 并保存官方安装包及 SHA-256；运行镜像移除 mount 和 pip。算法逻辑及业务依赖版本不变。本地与镜像内各 11 项 CLI 测试、容器约束和合成 GeoTIFF 回归通过。同库 Trivy HIGH/CRITICAL 从 81 条降至 50 条（47 HIGH、3 CRITICAL），安全门禁仍未通过。详见 reports/security/security-update/README.md。

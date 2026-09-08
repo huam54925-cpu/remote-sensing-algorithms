@@ -1,0 +1,100 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "rs-example-1788864716-1"
+  },
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 180,
+    "template": {
+      "spec": {
+        "restartPolicy": "Never",
+        "terminationGracePeriodSeconds": 10,
+        "automountServiceAccountToken": false,
+        "securityContext": {
+          "runAsUser": 1000,
+          "runAsGroup": 1000,
+          "runAsNonRoot": true
+        },
+        "containers": [
+          {
+            "name": "algorithm",
+            "image": "remote-sensing-framework:0.3.0-kmeans1",
+            "imagePullPolicy": "Never",
+            "args": [
+              "--algorithm",
+              "KMEANS",
+              "--input",
+              "/data/input/kmeans-input.tif",
+              "--output-dir",
+              "/data/output",
+              "--params",
+              "{\"clusters\":3}"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "250m",
+                "memory": "256Mi"
+              },
+              "limits": {
+                "cpu": "1",
+                "memory": "1Gi"
+              }
+            },
+            "securityContext": {
+              "allowPrivilegeEscalation": false,
+              "readOnlyRootFilesystem": true,
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "input",
+                "mountPath": "/data/input",
+                "readOnly": true
+              },
+              {
+                "name": "output",
+                "mountPath": "/data/output"
+              },
+              {
+                "name": "tmp",
+                "mountPath": "/tmp"
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "input",
+            "hostPath": {
+              "path": "/rs-input/kmeans-example",
+              "type": "Directory"
+            }
+          },
+          {
+            "name": "output",
+            "hostPath": {
+              "path": "/rs-output/rs-example-1788864716-1",
+              "type": "Directory"
+            }
+          },
+          {
+            "name": "tmp",
+            "emptyDir": {
+              "medium": "Memory",
+              "sizeLimit": "64Mi"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
