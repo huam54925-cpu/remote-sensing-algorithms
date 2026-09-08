@@ -1,5 +1,13 @@
 # 遥感算法容器封装框架 0.3.0
 
+## 操作手册 1.1
+
+详细操作手册共 42 页、12 章，包含配置填写、执行命令、参数说明、终端输出和完成判定。
+
+- [PDF 手册](output/pdf/remote-sensing-operations-manual.pdf)
+- [可复制命令的文本版](docs/manual/operations-manual.md)
+- [LaTeX 源码及编译说明](docs/manual/README.md)
+
 > 2026-09-08 更新：Kubernetes GPU 调度与实际 CUDA 运算已实测通过。最新结论、剩余项见 [总报告](docs/readiness-report-2026-09-08.md)，复测与启停命令见 [操作手册](docs/commands-gpu-k8s.md)。下文较早状态保留作历史记录。
 
 CPU 批处理示例：MNDWI 双波段指数、基于 scikit-learn 的 KMEANS 多波段聚类，以及 smoke 接口诊断。合成数据测试不替代真实卫星数据和对方算法精度验收。
