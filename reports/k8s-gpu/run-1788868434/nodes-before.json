@@ -1,0 +1,246 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "kind": "Node",
+      "metadata": {
+        "annotations": {
+          "node.alpha.kubernetes.io/ttl": "0",
+          "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+        },
+        "creationTimestamp": "2026-09-08T10:48:32Z",
+        "labels": {
+          "beta.kubernetes.io/arch": "amd64",
+          "beta.kubernetes.io/os": "linux",
+          "kubernetes.io/arch": "amd64",
+          "kubernetes.io/hostname": "rs-lab-control-plane",
+          "kubernetes.io/os": "linux",
+          "node-role.kubernetes.io/control-plane": ""
+        },
+        "name": "rs-lab-control-plane",
+        "resourceVersion": "6332",
+        "uid": "30b80770-a5bc-4181-86e8-3889d53b0a4d"
+      },
+      "spec": {
+        "podCIDR": "10.244.0.0/24",
+        "podCIDRs": [
+          "10.244.0.0/24"
+        ],
+        "providerID": "kind://docker/rs-lab/rs-lab-control-plane"
+      },
+      "status": {
+        "addresses": [
+          {
+            "address": "172.18.0.2",
+            "type": "InternalIP"
+          },
+          {
+            "address": "rs-lab-control-plane",
+            "type": "Hostname"
+          }
+        ],
+        "allocatable": {
+          "cpu": "12",
+          "ephemeral-storage": "960288792Ki",
+          "hugepages-1Gi": "0",
+          "hugepages-2Mi": "0",
+          "memory": "31728252Ki",
+          "nvidia.com/gpu": "1",
+          "pods": "110"
+        },
+        "capacity": {
+          "cpu": "12",
+          "ephemeral-storage": "960288792Ki",
+          "hugepages-1Gi": "0",
+          "hugepages-2Mi": "0",
+          "memory": "31728252Ki",
+          "nvidia.com/gpu": "1",
+          "pods": "110"
+        },
+        "conditions": [
+          {
+            "lastHeartbeatTime": "2026-09-08T11:53:54Z",
+            "lastTransitionTime": "2026-09-08T10:48:25Z",
+            "message": "kubelet has sufficient memory available",
+            "reason": "KubeletHasSufficientMemory",
+            "status": "False",
+            "type": "MemoryPressure"
+          },
+          {
+            "lastHeartbeatTime": "2026-09-08T11:53:54Z",
+            "lastTransitionTime": "2026-09-08T10:48:25Z",
+            "message": "kubelet has no disk pressure",
+            "reason": "KubeletHasNoDiskPressure",
+            "status": "False",
+            "type": "DiskPressure"
+          },
+          {
+            "lastHeartbeatTime": "2026-09-08T11:53:54Z",
+            "lastTransitionTime": "2026-09-08T10:48:25Z",
+            "message": "kubelet has sufficient PID available",
+            "reason": "KubeletHasSufficientPID",
+            "status": "False",
+            "type": "PIDPressure"
+          },
+          {
+            "lastHeartbeatTime": "2026-09-08T11:53:54Z",
+            "lastTransitionTime": "2026-09-08T10:49:10Z",
+            "message": "kubelet is posting ready status",
+            "reason": "KubeletReady",
+            "status": "True",
+            "type": "Ready"
+          }
+        ],
+        "daemonEndpoints": {
+          "kubeletEndpoint": {
+            "Port": 10250
+          }
+        },
+        "declaredFeatures": [
+          "ExtendWebSocketsToKubelet",
+          "InPlacePodLevelResourcesVerticalScaling",
+          "InPlacePodVerticalScalingInitContainers",
+          "RestartAllContainersOnContainerExits"
+        ],
+        "features": {
+          "supplementalGroupsPolicy": true
+        },
+        "images": [
+          {
+            "names": [
+              "docker.io/library/import-2026-09-08@sha256:e7a7d6fc40f0090d3d81063281aa8ffb9fa30f9b7d2b2195352d06b574257307",
+              "docker.io/library/remote-sensing-framework:0.3.0-kmeans1"
+            ],
+            "sizeBytes": 167914993
+          },
+          {
+            "names": [
+              "docker.io/library/import-2026-08-26@sha256:2123d119ca32eb19622df2e6279e27bc028d2c33d0e4afb46f197ca134e5f687",
+              "registry.k8s.io/kube-apiserver-amd64:v1.36.4",
+              "registry.k8s.io/kube-apiserver:v1.36.4"
+            ],
+            "sizeBytes": 96820086
+          },
+          {
+            "names": [
+              "docker.io/library/import-2026-08-26@sha256:5d1180ec5fa02cc8ffe2244491197efc92b5afe8637dbd2267cdb3a2102cde9c",
+              "registry.k8s.io/kube-controller-manager-amd64:v1.36.4",
+              "registry.k8s.io/kube-controller-manager:v1.36.4"
+            ],
+            "sizeBytes": 85995229
+          },
+          {
+            "names": [
+              "docker.io/library/import-2026-08-26@sha256:306a0415be3708a014f45abffffdffbf23c3625029b7b7b35c310b801205512a",
+              "registry.k8s.io/kube-proxy-amd64:v1.36.4",
+              "registry.k8s.io/kube-proxy:v1.36.4"
+            ],
+            "sizeBytes": 81708772
+          },
+          {
+            "names": [
+              "docker.io/library/import-2026-08-26@sha256:8aec479d9e6484c30cd03cc157e65ce2f661e4f5f67876aa6315686602faccdd",
+              "registry.k8s.io/kube-scheduler-amd64:v1.36.4",
+              "registry.k8s.io/kube-scheduler:v1.36.4"
+            ],
+            "sizeBytes": 60788827
+          },
+          {
+            "names": [
+              "docker.io/library/import-2026-09-08@sha256:4a364a8b72a7820a582627ee55c9ceccbb42f8c1cdc3480abb0d50c5186d9106",
+              "nvcr.io/nvidia/k8s-device-plugin@sha256:1de09dda8d1c179fe84e280f28a48a75c9a1a529d90eefcee1f80c012ac11640",
+              "nvcr.io/nvidia/k8s-device-plugin:v0.20.0"
+            ],
+            "sizeBytes": 55103472
+          },
+          {
+            "names": [
+              "docker.io/kindest/kindnetd:v20260820-69b56db7"
+            ],
+            "sizeBytes": 39744255
+          },
+          {
+            "names": [
+              "registry.k8s.io/coredns/coredns:v1.14.2"
+            ],
+            "sizeBytes": 23257541
+          },
+          {
+            "names": [
+              "registry.k8s.io/etcd:3.6.8-0"
+            ],
+            "sizeBytes": 22885795
+          },
+          {
+            "names": [
+              "docker.io/kindest/local-path-provisioner:v20260820-69b56db7"
+            ],
+            "sizeBytes": 15868133
+          },
+          {
+            "names": [
+              "docker.io/kindest/local-path-helper:v20260131-7181c60a"
+            ],
+            "sizeBytes": 2872608
+          },
+          {
+            "names": [
+              "registry.k8s.io/pause:3.10"
+            ],
+            "sizeBytes": 320368
+          }
+        ],
+        "nodeInfo": {
+          "architecture": "amd64",
+          "bootID": "56dc355f-f0d9-43cf-ac5f-36d0370048e4",
+          "containerRuntimeVersion": "containerd://2.3.4",
+          "kernelVersion": "7.0.0-31-generic",
+          "kubeProxyVersion": "",
+          "kubeletVersion": "v1.36.4",
+          "machineID": "9f8a6164437940678f015acede0bdd76",
+          "operatingSystem": "linux",
+          "osImage": "Debian GNU/Linux 13 (trixie)",
+          "swap": {
+            "capacity": 8589930496
+          },
+          "systemUUID": "cfb16625-c943-4bbe-bd14-e45470b3400c"
+        },
+        "runtimeHandlers": [
+          {
+            "features": {
+              "recursiveReadOnlyMounts": true,
+              "userNamespaces": true
+            },
+            "name": ""
+          },
+          {
+            "features": {
+              "recursiveReadOnlyMounts": true,
+              "userNamespaces": true
+            },
+            "name": "nvidia-bootstrap"
+          },
+          {
+            "features": {
+              "recursiveReadOnlyMounts": true,
+              "userNamespaces": true
+            },
+            "name": "runc"
+          },
+          {
+            "features": {
+              "recursiveReadOnlyMounts": true,
+              "userNamespaces": true
+            },
+            "name": "test-handler"
+          }
+        ]
+      }
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}

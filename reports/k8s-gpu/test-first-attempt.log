@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/robot_disk/remote_sensing_project/scripts/test-k8s-gpu.py", line 107, in <module>
+    save('holder-compute.log',wait_for(holding))
+                              ~~~~~~~~^^^^^^^^^
+  File "/mnt/robot_disk/remote_sensing_project/scripts/test-k8s-gpu.py", line 36, in wait_for
+    value=callback()
+  File "/mnt/robot_disk/remote_sensing_project/scripts/test-k8s-gpu.py", line 103, in holding
+    save('holder-failed.json',obj);save('holder-failed.log',k('-n',NS,'logs',holder));raise RuntimeError('Holder failed')
+                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Holder failed

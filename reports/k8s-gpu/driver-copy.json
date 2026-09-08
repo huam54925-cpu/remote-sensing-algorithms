@@ -1,0 +1,277 @@
+{
+  "files": [
+    {
+      "path": "/etc/OpenCL/vendors/nvidia.icd",
+      "sha256": "4ad07f8afc189894374aecb91023e6ff16bbceedf82496c04c0fdb0e2fe81e73",
+      "bytes": 22
+    },
+    {
+      "path": "/lib/firmware/nvidia/595.84/gsp_ga10x.bin",
+      "sha256": "1c107d18cd63a08fd4ba78706809825c756db2b4a556c453fb5c003976839946",
+      "bytes": 72865776
+    },
+    {
+      "path": "/lib/firmware/nvidia/595.84/gsp_tu10x.bin",
+      "sha256": "76e4d216b8f80c995f97e114e7aa1b87475f6d694cb78d78ce2f52070fb30739",
+      "bytes": 30065536
+    },
+    {
+      "path": "/usr/bin/nvidia-cdi-hook",
+      "sha256": "12556bcbc901d5d698f126f38200c90553e4ddf71bfd768b7f5e6460b8cb454f",
+      "bytes": 6891680
+    },
+    {
+      "path": "/usr/bin/nvidia-cuda-mps-control",
+      "sha256": "ee279a9ae78dbf32126793bd26b4d8daa5cfc6e46c75f0871426f072fe4a3e92",
+      "bytes": 83232
+    },
+    {
+      "path": "/usr/bin/nvidia-cuda-mps-server",
+      "sha256": "f00d5091d28c627b356759176b0920f7640a0aec23538e5bd1d6aba3baebf7c5",
+      "bytes": 18648
+    },
+    {
+      "path": "/usr/bin/nvidia-debugdump",
+      "sha256": "bce183514e7d7f0093fc65b6cb68552afd33ba02045e7bbd775235c0d9b226ce",
+      "bytes": 142136
+    },
+    {
+      "path": "/usr/bin/nvidia-persistenced",
+      "sha256": "348a7676e9d45be76506da0431edc30e309514b73c5a97f749de36afd8591667",
+      "bytes": 216608
+    },
+    {
+      "path": "/usr/bin/nvidia-smi",
+      "sha256": "dd0cbc1a839dae1cfadb5ba1ffb8e3bfed99ddd8f3d1dca8e986d68ce7d0515c",
+      "bytes": 1259616
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libEGL_nvidia.so.595.84",
+      "sha256": "f3eae0bdc723d53c9d1300099b21393d09e143cf2d55d9b71d0a301a8bc54607",
+      "bytes": 1288448
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libGLESv1_CM_nvidia.so.595.84",
+      "sha256": "40d59c415188bca5791dda5f32e7381c128c04ab5696cb63cf9f3a3a402f9142",
+      "bytes": 80336
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libGLESv2_nvidia.so.595.84",
+      "sha256": "9b53d4b99ab7f1b352bed0e5eee4e00f2a2fe1d0b3665eb5c298e82a3807c4fa",
+      "bytes": 129488
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.595.84",
+      "sha256": "fb662c6eeef37dffe0ea961213125ba2b9e8ada49f40b4ef665582053782f4c3",
+      "bytes": 1211968
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libcuda.so.595.84",
+      "sha256": "c147185c80a0270d635db626537fc9223b2ad1764f86cb12fd116d26e08b175d",
+      "bytes": 91505672
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libcudadebugger.so.595.84",
+      "sha256": "29937241be4f960d9af9e1dd6330289f44405bf5a2c7e363c92bacfb30283928",
+      "bytes": 11732000
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvcuvid.so.595.84",
+      "sha256": "8842e88779e69352e56d8e126135a984bf8cb38503ac2175692e20e57d4f0dda",
+      "bytes": 25189896
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-allocator.so.595.84",
+      "sha256": "9a9399a185c37febffd4463eb45a78938d6766680914bb4110f43cf3bcfe2adb",
+      "bytes": 169096
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-cfg.so.595.84",
+      "sha256": "6ed1a3ac3bdac00019dbaff1ae43d13277482e24fa723380bf9c36c4595c1057",
+      "bytes": 391288
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-egl-gbm.so.1.1.3",
+      "sha256": "e29bdc9b4cb3220af9810ce4ff9d061c62eca0fee0747fc85c9fd457f239630b",
+      "bytes": 26936
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-egl-wayland.so.1.1.21",
+      "sha256": "be2222af285fd3b103c7d2b99fe4384ee6e8a1d143d63351f56a67d8d35e309e",
+      "bytes": 81736
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-egl-wayland2.so.1.0.1",
+      "sha256": "304660c5d8cad6d7d106faa995e63bca3fe8c42ded6779d7262744106bd3268e",
+      "bytes": 85304
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-eglcore.so.595.84",
+      "sha256": "acb997a3a750ec0de7ac749666ca800af014e217edf6e952eaf6cba663112345",
+      "bytes": 37885168
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-encode.so.595.84",
+      "sha256": "dc8009c77f55133714016d39211bd5c03c87fc5795a36b02efc3c2a06ee48a46",
+      "bytes": 289560
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-fbc.so.595.84",
+      "sha256": "1ee25d3b7479bfd345f4e8adde1975f671a5da48942738b9564e318332f8112f",
+      "bytes": 245728
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.595.84",
+      "sha256": "1bb7513540b7fe2075478c651c0aad6bff17e638e8eb1cd5807969f5da1b345f",
+      "bytes": 39846280
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-glsi.so.595.84",
+      "sha256": "8facf3baeafbf069f2d5046c84ed26c7c15953098d933239c8dd6c2f3cf00f39",
+      "bytes": 603016
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-glvkspirv.so.595.84",
+      "sha256": "f743e0b40fb1a80abe8ced313d10413590534db3a78a8bbd6abd42905e972855",
+      "bytes": 10362800
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-gpucomp.so.595.84",
+      "sha256": "6ae96c1db65fdd4e11ef93a03a12bbdfd15a99db5164e8031a43ac2d8a4c2f77",
+      "bytes": 94071768
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-ml.so.595.84",
+      "sha256": "6d8a58eb15a1c2e6067ec977e9de57b42a3d632b4073818ab648370fecfc82b1",
+      "bytes": 2621336
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-ngx.so.595.84",
+      "sha256": "694b31ca0ecba64b8dd6c7c1424cdc4bccf41284299ae0570ad188576f5cb5c4",
+      "bytes": 5488928
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-nvvm.so.595.84",
+      "sha256": "331a6ed322af562ab323d7d28e124fd3a7fa685aeb5bf7743742ba8746a14e55",
+      "bytes": 78310760
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-nvvm70.so.4",
+      "sha256": "e327630af7997043cac342471bb303fdc212ae00c687b53b68e60cee1f910b24",
+      "bytes": 24829456
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.595.84",
+      "sha256": "cec5217cfec5074d7110d56840409f1e24e474b88f332f11513e430e890e03c9",
+      "bytes": 87287440
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-opticalflow.so.595.84",
+      "sha256": "ccd587cecf7d7aa6fd92cb17a62558cd77233536ba3901fb5edafb1c25b9f2d3",
+      "bytes": 67720
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-pkcs11-openssl3.so.595.84",
+      "sha256": "ac2b3059a6d455a0a4fa499839dbe1676055b9a94f15fbb63353fe7d41c8278e",
+      "bytes": 14336
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-pkcs11.so.595.84",
+      "sha256": "bd54919a6dac0fea4983af3dfe7c91e25b8362ec36c9f2433c98cd5733be5a98",
+      "bytes": 14328
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-present.so.595.84",
+      "sha256": "fd621b970dd1516e564a3f0d232fd43f00f181b868d6c265ee2f36e09be2ef01",
+      "bytes": 6777704
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-ptxjitcompiler.so.595.84",
+      "sha256": "3852c0cb43a6f411bf10bc0f8daa9d492e8b784e72fda04ca3411b77d3d7d28b",
+      "bytes": 32826968
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-rtcore.so.595.84",
+      "sha256": "0363addaa217ed047721525c42f706037a3d7a7228659206f907891d823def89",
+      "bytes": 42113984
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-tileiras.so.595.84",
+      "sha256": "5e181b3feecf13902a27bb9f73d88ba417c24ef77add16cad327c105d7d16b47",
+      "bytes": 97276648
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-tls.so.595.84",
+      "sha256": "b7d083165c164005b5abcddf9fb67e7887e332e25a284a82b2a57072ee981cd0",
+      "bytes": 18632
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvidia-vksc-core.so.595.84",
+      "sha256": "d33531fde002ed8ada6b2ca40a43fe19f6e7900c4908246fcb0ca4979ca132f1",
+      "bytes": 11144408
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/libnvoptix.so.595.84",
+      "sha256": "d4d604418ad3e979f8e864acea30884d52dae59fcd90764f8437e1d7c79dd0e0",
+      "bytes": 49759128
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/nvidia/xorg/libglxserver_nvidia.so.595.84",
+      "sha256": "4611bca25faaa97c4c1739b6f485e669a4dfe80fe7d40a2d5ede3ca99da04256",
+      "bytes": 5747760
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/nvidia/xorg/nvidia_drv.so",
+      "sha256": "999e64e724b0d56075b45d89a85a8ec43b4f4540eda63e218f03a26b69351685",
+      "bytes": 3643440
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu/vdpau/libvdpau_nvidia.so.595.84",
+      "sha256": "92e14acc1eda474ea74351e76419a5b9687e697f4d009f88ad6b9aaa333cc362",
+      "bytes": 617808
+    },
+    {
+      "path": "/usr/share/X11/xorg.conf.d/10-nvidia.conf",
+      "sha256": "21938c36b95fc07ac5a00f64eb72b53d712131a9efb281955629e34e9f52ff74",
+      "bytes": 206
+    },
+    {
+      "path": "/usr/share/egl/egl_external_platform.d/09_nvidia_wayland2.json",
+      "sha256": "e8eaee4d33797e226fbfb05c523122cffe4d064995d9575bbdc598cc978ed3a4",
+      "bytes": 116
+    },
+    {
+      "path": "/usr/share/egl/egl_external_platform.d/10_nvidia_wayland.json",
+      "sha256": "5cccf1905a266e8e34d5ad4aad4be85390e60b1a0850a29dd9d64adc641de412",
+      "bytes": 115
+    },
+    {
+      "path": "/usr/share/egl/egl_external_platform.d/15_nvidia_gbm.json",
+      "sha256": "be0e01a28300d80ea9a326718d4bdc45eb1ec5d80482a8f6e69e9e1594a5f196",
+      "bytes": 96
+    },
+    {
+      "path": "/usr/share/glvnd/egl_vendor.d/10_nvidia.json",
+      "sha256": "9e6f14afaa7523370ad96e6675d3357441ee3985e60405cb3e0ced30b2ddaf76",
+      "bytes": 107
+    },
+    {
+      "path": "/usr/share/nvidia/nvoptix.bin",
+      "sha256": "4b0bea100bfbfdfc9eb9dc5e5d38c0cb0bca380a78ca52abe7e5598535c05ecf",
+      "bytes": 48744640
+    },
+    {
+      "path": "/usr/share/vulkan/icd.d/nvidia_icd.json",
+      "sha256": "8bf904abc1c5d6428a1f27cc5d4a3c9783d15231f17ce1ef8d25e9cab1f60d1c",
+      "bytes": 140
+    },
+    {
+      "path": "/usr/share/vulkan/implicit_layer.d/nvidia_layers.json",
+      "sha256": "e984abf9c29cb3e5e50ef008fe4469d7fba73edadb1e1ecb5aa80a3289749f73",
+      "bytes": 1246
+    }
+  ],
+  "omitted_sockets": [
+    "/run/nvidia-persistenced/socket"
+  ]
+}

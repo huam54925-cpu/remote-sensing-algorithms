@@ -1,5 +1,7 @@
 # 0.3.0 部署验证记录
 
+> 2026-09-08 更新：Kubernetes GPU 调度与实际 CUDA 运算已实测通过。最新结论、剩余项见 [总报告](../../docs/readiness-report-2026-09-08.md)，复测与启停命令见 [操作手册](../../docs/commands-gpu-k8s.md)。下文较早状态保留作历史记录。
+
 日期：2026-09-08。本机 Ubuntu 26.04.1 / Linux amd64、i7-9750H、约 30 GiB 内存；Docker 29.1.3。源码分支 codex/kmeans-deployment。本报告只覆盖封装示例与本地环境，不代表真实业务算法、目标集群或 GPU 已验收。
 
 ## 已完成

@@ -1,0 +1,254 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"name\":\"holder-1788868111\",\"namespace\":\"rs-gpu-tests\"},\"spec\":{\"activeDeadlineSeconds\":240,\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-u\",\"-c\",\"import signal,sys; signal.signal(signal.SIGTERM,lambda *_:sys.exit(143));import runpy; runpy.run_path('/test/verify_cuda_compute.py',run_name='__main__'); import time,json; print(json.dumps({'phase':'holding'}),flush=True); time.sleep(180)\"],\"image\":\"remote-sensing-framework:0.3.0-kmeans1\",\"imagePullPolicy\":\"Never\",\"name\":\"compute\",\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"512Mi\",\"nvidia.com/gpu\":1},\"requests\":{\"cpu\":\"100m\",\"memory\":\"128Mi\",\"nvidia.com/gpu\":1}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"volumeMounts\":[{\"mountPath\":\"/test\",\"name\":\"test\",\"readOnly\":true},{\"mountPath\":\"/tmp\",\"name\":\"tmp\"}]}],\"restartPolicy\":\"Never\",\"securityContext\":{\"runAsGroup\":1000,\"runAsNonRoot\":true,\"runAsUser\":1000},\"terminationGracePeriodSeconds\":10,\"volumes\":[{\"configMap\":{\"name\":\"gpu-compute-1788868111\"},\"name\":\"test\"},{\"emptyDir\":{\"medium\":\"Memory\",\"sizeLimit\":\"64Mi\"},\"name\":\"tmp\"}]}}\n"
+    },
+    "creationTimestamp": "2026-09-08T11:48:40Z",
+    "generation": 1,
+    "name": "holder-1788868111",
+    "namespace": "rs-gpu-tests",
+    "resourceVersion": "5963",
+    "uid": "637f15ae-eacf-4b30-9bc6-475cb43bd888"
+  },
+  "spec": {
+    "activeDeadlineSeconds": 240,
+    "automountServiceAccountToken": false,
+    "containers": [
+      {
+        "command": [
+          "python",
+          "-u",
+          "-c",
+          "import signal,sys; signal.signal(signal.SIGTERM,lambda *_:sys.exit(143));import runpy; runpy.run_path('/test/verify_cuda_compute.py',run_name='__main__'); import time,json; print(json.dumps({'phase':'holding'}),flush=True); time.sleep(180)"
+        ],
+        "image": "remote-sensing-framework:0.3.0-kmeans1",
+        "imagePullPolicy": "Never",
+        "name": "compute",
+        "resources": {
+          "limits": {
+            "cpu": "1",
+            "memory": "512Mi",
+            "nvidia.com/gpu": "1"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "128Mi",
+            "nvidia.com/gpu": "1"
+          }
+        },
+        "securityContext": {
+          "allowPrivilegeEscalation": false,
+          "capabilities": {
+            "drop": [
+              "ALL"
+            ]
+          },
+          "readOnlyRootFilesystem": true,
+          "seccompProfile": {
+            "type": "RuntimeDefault"
+          }
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/test",
+            "name": "test",
+            "readOnly": true
+          },
+          {
+            "mountPath": "/tmp",
+            "name": "tmp"
+          }
+        ]
+      }
+    ],
+    "dnsPolicy": "ClusterFirst",
+    "enableServiceLinks": true,
+    "nodeName": "rs-lab-control-plane",
+    "preemptionPolicy": "PreemptLowerPriority",
+    "priority": 0,
+    "restartPolicy": "Never",
+    "schedulerName": "default-scheduler",
+    "securityContext": {
+      "runAsGroup": 1000,
+      "runAsNonRoot": true,
+      "runAsUser": 1000
+    },
+    "serviceAccount": "default",
+    "serviceAccountName": "default",
+    "terminationGracePeriodSeconds": 10,
+    "tolerations": [
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      }
+    ],
+    "volumes": [
+      {
+        "configMap": {
+          "defaultMode": 420,
+          "name": "gpu-compute-1788868111"
+        },
+        "name": "test"
+      },
+      {
+        "emptyDir": {
+          "medium": "Memory",
+          "sizeLimit": "64Mi"
+        },
+        "name": "tmp"
+      }
+    ]
+  },
+  "status": {
+    "allocatedResources": {
+      "cpu": "100m",
+      "memory": "128Mi",
+      "nvidia.com/gpu": "1"
+    },
+    "conditions": [
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:48:41Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodReadyToStartContainers"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:48:40Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Initialized"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:50:16Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:50:16Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "ContainersReady"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:48:40Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodScheduled"
+      }
+    ],
+    "containerStatuses": [
+      {
+        "allocatedResources": {
+          "cpu": "100m",
+          "memory": "128Mi",
+          "nvidia.com/gpu": "1"
+        },
+        "allocatedResourcesStatus": [
+          {
+            "name": "nvidia.com/gpu",
+            "resources": [
+              {
+                "health": "Healthy",
+                "resourceID": "GPU-799ca157-e0c7-e842-9d2b-0adaa7959083"
+              }
+            ]
+          }
+        ],
+        "containerID": "containerd://c1c676b812f5a524164b248ebd522d8ec84d835022a40a83659f86da61f8750d",
+        "image": "docker.io/library/remote-sensing-framework:0.3.0-kmeans1",
+        "imageID": "docker.io/library/import-2026-09-08@sha256:e7a7d6fc40f0090d3d81063281aa8ffb9fa30f9b7d2b2195352d06b574257307",
+        "lastState": {},
+        "name": "compute",
+        "ready": true,
+        "resources": {
+          "limits": {
+            "cpu": "1",
+            "memory": "512Mi",
+            "nvidia.com/gpu": "1"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "128Mi",
+            "nvidia.com/gpu": "1"
+          }
+        },
+        "restartCount": 0,
+        "started": true,
+        "state": {
+          "running": {
+            "startedAt": "2026-09-08T11:50:16Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 1000,
+            "supplementalGroups": [
+              1000,
+              44,
+              990
+            ],
+            "uid": 1000
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/test",
+            "name": "test",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          },
+          {
+            "mountPath": "/tmp",
+            "name": "tmp"
+          }
+        ]
+      }
+    ],
+    "hostIP": "172.18.0.2",
+    "hostIPs": [
+      {
+        "ip": "172.18.0.2"
+      }
+    ],
+    "observedGeneration": 1,
+    "phase": "Running",
+    "podIP": "10.244.0.13",
+    "podIPs": [
+      {
+        "ip": "10.244.0.13"
+      }
+    ],
+    "qosClass": "Burstable",
+    "resources": {
+      "limits": {
+        "cpu": "1",
+        "memory": "512Mi",
+        "nvidia.com/gpu": "1"
+      },
+      "requests": {
+        "cpu": "100m",
+        "memory": "128Mi",
+        "nvidia.com/gpu": "1"
+      }
+    },
+    "startTime": "2026-09-08T11:48:40Z"
+  }
+}

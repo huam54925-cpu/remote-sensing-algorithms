@@ -1,5 +1,7 @@
 # GPU 配置后复测
 
+> 2026-09-08 更新：Kubernetes GPU 调度与实际 CUDA 运算已实测通过。最新结论、剩余项见 [总报告](../../../docs/readiness-report-2026-09-08.md)，复测与启停命令见 [操作手册](../../../docs/commands-gpu-k8s.md)。下文较早状态保留作历史记录。
+
 用户安装 NVIDIA Container Toolkit CLI 1.20.0，执行 runtime configure 并重启 Docker 后复测。
 
 - 现有 0.3.0 镜像通过 `--gpus all` 成功运行 nvidia-smi，识别 GTX 1650、4096 MiB 显存、驱动 595.84。

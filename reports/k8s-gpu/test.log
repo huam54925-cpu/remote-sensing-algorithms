@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "allocatable_gpus": 1,
+  "gpu_correctness": true,
+  "exclusive_scheduling": true,
+  "excess_request_unschedulable": true,
+  "no_request_no_device": true,
+  "job_deadline_exceeded_verified": true,
+  "release_to_completion_seconds": 12.202070977000403,
+  "completed_job": "queued-1788868111",
+  "records": "/mnt/robot_disk/remote_sensing_project/reports/k8s-gpu/run-1788868111"
+}

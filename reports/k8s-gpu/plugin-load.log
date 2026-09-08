@@ -1,0 +1,4 @@
+Image: "nvcr.io/nvidia/k8s-device-plugin:v0.20.0" with ID "sha256:a61ba9fd8efb82f3a79f877f7580e02c1e8e7593f62473644bc9c79e315c3312" not yet present on node "rs-lab-control-plane", loading...
+ERROR: failed to load image: command "docker exec --privileged -i rs-lab-control-plane ctr --namespace=k8s.io images import --all-platforms --digests --snapshotter=overlayfs -" failed with error: exit status 1
+
+Command Output: ctr: content digest sha256:77ef8eec91ec0bf6ddda4ef94e37e40e2d4abd56f5ea5eb0db1e3f7f93b331e8: not found

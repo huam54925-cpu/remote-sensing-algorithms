@@ -1,0 +1,9 @@
+I0908 11:40:34.301009       1 main.go:269] "Starting NVIDIA Device Plugin" version=<
+	1b826acc
+	commit: 1b826acc6af3079d8923bac395c3124b8861a9a6
+ >
+I0908 11:40:34.301264       1 main.go:272] Starting FS watcher for /var/lib/kubelet/device-plugins
+I0908 11:40:34.301412       1 main.go:279] Starting OS watcher.
+I0908 11:40:34.302001       1 main.go:294] Starting Plugins.
+I0908 11:40:34.302036       1 main.go:351] Loading configuration.
+E0908 11:40:34.304203       1 main.go:198] error starting plugins: unable to validate flags: CDI --device-list-strategy options are only supported on NVML-based systems

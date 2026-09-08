@@ -1,0 +1,75 @@
+I0908 11:42:56.977992       1 main.go:269] "Starting NVIDIA Device Plugin" version=<
+	1b826acc
+	commit: 1b826acc6af3079d8923bac395c3124b8861a9a6
+ >
+I0908 11:42:56.978228       1 main.go:272] Starting FS watcher for /var/lib/kubelet/device-plugins
+I0908 11:42:56.978455       1 main.go:279] Starting OS watcher.
+I0908 11:42:56.979212       1 main.go:294] Starting Plugins.
+I0908 11:42:56.979289       1 main.go:351] Loading configuration.
+I0908 11:42:56.983868       1 main.go:377] Updating config with default resource matching patterns.
+I0908 11:42:56.985060       1 main.go:388] 
+Running with config:
+{
+  "version": "v1",
+  "flags": {
+    "migStrategy": "none",
+    "failOnInitError": true,
+    "mpsRoot": "",
+    "nvidiaDriverRoot": "/",
+    "nvidiaDevRoot": "/",
+    "gdrcopyEnabled": false,
+    "gdsEnabled": false,
+    "mofedEnabled": false,
+    "useNodeFeatureAPI": null,
+    "deviceDiscoveryStrategy": "auto",
+    "plugin": {
+      "passDeviceSpecs": false,
+      "deviceListStrategy": [
+        "cdi-cri"
+      ],
+      "deviceIDStrategy": "uuid",
+      "cdiAnnotationPrefix": "cdi.k8s.io/",
+      "nvidiaCTKPath": "/usr/bin/nvidia-ctk",
+      "containerDriverRoot": "/driver-root",
+      "sharedDevicesAllocationPolicy": "distributed"
+    }
+  },
+  "resources": {
+    "gpus": [
+      {
+        "pattern": "*",
+        "name": "nvidia.com/gpu"
+      }
+    ]
+  },
+  "sharing": {
+    "timeSlicing": {}
+  },
+  "imex": {}
+}
+I0908 11:42:56.985136       1 main.go:391] Retrieving plugins.
+I0908 11:42:57.110160       1 plugin-manager.go:101] Detected platform: nvml
+I0908 11:42:57.110256       1 plugin-manager.go:50] Using device discovery strategy: nvml
+time="2026-09-08T11:42:57Z" level=warning msg="Failed to load ldcache: open /driver-root/etc/ld.so.cache: no such file or directory"
+time="2026-09-08T11:42:57Z" level=warning msg="Ignoring error in locating libnvidia-sandboxutils.so.1: libnvidia-sandboxutils.so.1: not found\nlibnvidia-sandboxutils.so.1: not found"
+time="2026-09-08T11:42:57Z" level=warning msg="Failed to init nvsandboxutils: ERROR_LIBRARY_LOAD; ignoring"
+time="2026-09-08T11:42:57Z" level=info msg="Auto-detected mode as 'nvml'"
+time="2026-09-08T11:42:57Z" level=info msg="Generating CDI spec for resource: k8s.device-plugin.nvidia.com/gpu"
+time="2026-09-08T11:42:57Z" level=info msg="Selecting /dev/nvidia0 as /dev/nvidia0"
+time="2026-09-08T11:42:57Z" level=info msg="Selecting /dev/dri/card1 as /dev/dri/card1"
+time="2026-09-08T11:42:57Z" level=warning msg="Could not locate /dev/dri/controlD65: /dev/dri/controlD65: not found"
+time="2026-09-08T11:42:57Z" level=info msg="Selecting /dev/dri/renderD128 as /dev/dri/renderD128"
+time="2026-09-08T11:42:57Z" level=info msg="Selecting /dev/nvidia0 as /dev/nvidia0"
+time="2026-09-08T11:42:57Z" level=info msg="Selecting /dev/dri/card1 as /dev/dri/card1"
+time="2026-09-08T11:42:57Z" level=warning msg="Could not locate /dev/dri/controlD65: /dev/dri/controlD65: not found"
+time="2026-09-08T11:42:57Z" level=info msg="Selecting /dev/dri/renderD128 as /dev/dri/renderD128"
+time="2026-09-08T11:42:57Z" level=warning msg="Failed to load ldcache: open /driver-root/etc/ld.so.cache: no such file or directory"
+time="2026-09-08T11:42:57Z" level=warning msg="Failed to load ldcache: open /driver-root/etc/ld.so.cache: no such file or directory"
+time="2026-09-08T11:42:57Z" level=warning msg="failed to create discoverer for graphics mounts: failed to construct discoverer for graphics libraries: failed to get libcuda.so parent directory: failed to locate \"libcuda.so.\": libcuda.so.595.84: not found\nlibcuda.so.595.84: not found\nfailed to locate \"libnvidia-ml.so.\": libnvidia-ml.so.595.84: not found\nlibnvidia-ml.so.595.84: not found"
+time="2026-09-08T11:42:57Z" level=info msg="Using driver version 595.84"
+time="2026-09-08T11:42:57Z" level=warning msg="Failed to load ldcache: open /driver-root/etc/ld.so.cache: no such file or directory"
+time="2026-09-08T11:42:57Z" level=warning msg="Failed to load ldcache: open /driver-root/etc/ld.so.cache: no such file or directory"
+E0908 11:42:57.480326       1 main.go:198] error starting plugins: error getting plugins: unable to create cdi spec file: failed to get CDI spec: failed to create discoverer for common entities: failed to create discoverer for driver files: failed to create discoverer for driver libraries: failed to get libraries for driver version: failed to get driver library locator: failed to get libcuda.so parent directory: failed to locate "libcuda.so.": libcuda.so.595.84: not found
+libcuda.so.595.84: not found
+failed to locate "libnvidia-ml.so.": libnvidia-ml.so.595.84: not found
+libnvidia-ml.so.595.84: not found

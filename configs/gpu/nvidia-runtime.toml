@@ -1,0 +1,6 @@
+[nvidia-container-runtime]
+mode = "cdi"
+runtimes = ["runc"]
+[nvidia-container-runtime.modes.cdi]
+spec-dirs = ["/etc/cdi", "/var/run/cdi"]
+default-kind = "nvidia.com/gpu"

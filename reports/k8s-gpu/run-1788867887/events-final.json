@@ -1,0 +1,265 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-09-08T11:44:56.151861Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "holder-1788867887",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5443",
+                "uid": "dcf7c041-412e-42df-9b42-aa7aa151c2de"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned rs-gpu-tests/holder-1788867887 to rs-lab-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T11:44:56Z",
+                "name": "holder-1788867887.18d355dfac3bb416",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5446",
+                "uid": "2f9186d7-c091-4b08-9ffc-a18e09dead62"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-rs-lab-control-plane",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-09-08T11:44:57Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "holder-1788867887",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5445",
+                "uid": "dcf7c041-412e-42df-9b42-aa7aa151c2de"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-09-08T11:44:57Z",
+            "message": "Container image \"remote-sensing-framework:0.3.0-kmeans1\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T11:44:57Z",
+                "name": "holder-1788867887.18d355e011df9075",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5450",
+                "uid": "22925123-9c12-4a05-be2c-29fe39faca64"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "rs-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "rs-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-09-08T11:44:58Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "holder-1788867887",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5445",
+                "uid": "dcf7c041-412e-42df-9b42-aa7aa151c2de"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-09-08T11:44:58Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T11:44:58Z",
+                "name": "holder-1788867887.18d355e037a5781f",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5453",
+                "uid": "96b3f7f1-fe9d-4cd4-bbdf-059f9710810c"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "rs-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "rs-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-09-08T11:44:59Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "holder-1788867887",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5445",
+                "uid": "dcf7c041-412e-42df-9b42-aa7aa151c2de"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-09-08T11:44:59Z",
+            "message": "Error: failed to create containerd task: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: failed to fulfil mount request: open /etc/vulkan/icd.d/nvidia_icd.json: no such file or directory",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T11:44:59Z",
+                "name": "holder-1788867887.18d355e059abf485",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5454",
+                "uid": "ef000d30-18a6-4ea0-b8b1-6cf8f9d7796e"
+            },
+            "reason": "Failed",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "rs-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "rs-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-09-08T11:44:49.688860Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "no-gpu-1788867887",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5422",
+                "uid": "b32129c7-6647-4e5a-8f4e-082526a07b1f"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned rs-gpu-tests/no-gpu-1788867887 to rs-lab-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T11:44:49Z",
+                "name": "no-gpu-1788867887.18d355de2b021d14",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5424",
+                "uid": "106d638a-2e11-4b58-9f8b-ec9e8df4ac5b"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-rs-lab-control-plane",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-09-08T11:44:51Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "no-gpu-1788867887",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5423",
+                "uid": "b32129c7-6647-4e5a-8f4e-082526a07b1f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-09-08T11:44:51Z",
+            "message": "Container image \"remote-sensing-framework:0.3.0-kmeans1\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T11:44:51Z",
+                "name": "no-gpu-1788867887.18d355de854f9aba",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5428",
+                "uid": "929caff7-bfde-468d-928a-5b7d92aceb5c"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "rs-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "rs-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-09-08T11:44:51Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "no-gpu-1788867887",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5423",
+                "uid": "b32129c7-6647-4e5a-8f4e-082526a07b1f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-09-08T11:44:51Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T11:44:51Z",
+                "name": "no-gpu-1788867887.18d355dea2c7cb91",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5430",
+                "uid": "c270f0f7-cef8-41ff-9b44-2dcdc805924b"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "rs-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "rs-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-09-08T11:44:52Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "no-gpu-1788867887",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5423",
+                "uid": "b32129c7-6647-4e5a-8f4e-082526a07b1f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-09-08T11:44:52Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T11:44:52Z",
+                "name": "no-gpu-1788867887.18d355debbf54db4",
+                "namespace": "rs-gpu-tests",
+                "resourceVersion": "5434",
+                "uid": "08be57b5-0016-4486-b75e-ae2c3bb36ee8"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "rs-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "rs-lab-control-plane"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

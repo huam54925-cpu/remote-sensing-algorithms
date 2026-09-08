@@ -1,5 +1,7 @@
 # 数据盘上的本地 Kubernetes 测试环境
 
+> 2026-09-08 更新：Kubernetes GPU 调度与实际 CUDA 运算已实测通过。最新结论、剩余项见 [总报告](readiness-report-2026-09-08.md)，复测与启停命令见 [操作手册](commands-gpu-k8s.md)。下文较早状态保留作历史记录。
+
 用户指定将 Kubernetes 安装/数据保存在格式化的数据盘。采用 kind 单节点集群 rs-lab；它运行真实 Kubernetes 控制平面，适合本机集成测试，不作为生产集群交付。
 
 | 内容 | 路径 |

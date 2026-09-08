@@ -1,0 +1,147 @@
+{
+    "apiVersion": "batch/v1",
+    "kind": "Job",
+    "metadata": {
+        "creationTimestamp": "2026-09-08T11:59:09Z",
+        "generateName": "rs-cuda-check-",
+        "generation": 1,
+        "labels": {
+            "batch.kubernetes.io/controller-uid": "b7a8e5fe-3a95-4720-a7e0-a1f66333958a",
+            "batch.kubernetes.io/job-name": "rs-cuda-check-9d229",
+            "controller-uid": "b7a8e5fe-3a95-4720-a7e0-a1f66333958a",
+            "job-name": "rs-cuda-check-9d229"
+        },
+        "name": "rs-cuda-check-9d229",
+        "namespace": "rs-gpu-tests",
+        "resourceVersion": "6890",
+        "uid": "b7a8e5fe-3a95-4720-a7e0-a1f66333958a"
+    },
+    "spec": {
+        "activeDeadlineSeconds": 120,
+        "backoffLimit": 0,
+        "completionMode": "NonIndexed",
+        "completions": 1,
+        "manualSelector": false,
+        "parallelism": 1,
+        "podReplacementPolicy": "TerminatingOrFailed",
+        "selector": {
+            "matchLabels": {
+                "batch.kubernetes.io/controller-uid": "b7a8e5fe-3a95-4720-a7e0-a1f66333958a"
+            }
+        },
+        "suspend": false,
+        "template": {
+            "metadata": {
+                "labels": {
+                    "batch.kubernetes.io/controller-uid": "b7a8e5fe-3a95-4720-a7e0-a1f66333958a",
+                    "batch.kubernetes.io/job-name": "rs-cuda-check-9d229",
+                    "controller-uid": "b7a8e5fe-3a95-4720-a7e0-a1f66333958a",
+                    "job-name": "rs-cuda-check-9d229"
+                }
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "command": [
+                            "python",
+                            "-u",
+                            "/test/verify_cuda_compute.py"
+                        ],
+                        "image": "remote-sensing-framework:0.3.0-kmeans1",
+                        "imagePullPolicy": "Never",
+                        "name": "compute",
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "512Mi",
+                                "nvidia.com/gpu": "1"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "128Mi",
+                                "nvidia.com/gpu": "1"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/test",
+                                "name": "test",
+                                "readOnly": true
+                            },
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsGroup": 1000,
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000
+                },
+                "terminationGracePeriodSeconds": 10,
+                "volumes": [
+                    {
+                        "configMap": {
+                            "defaultMode": 420,
+                            "name": "rs-cuda-compute"
+                        },
+                        "name": "test"
+                    },
+                    {
+                        "emptyDir": {
+                            "medium": "Memory",
+                            "sizeLimit": "64Mi"
+                        },
+                        "name": "tmp"
+                    }
+                ]
+            }
+        }
+    },
+    "status": {
+        "completionTime": "2026-09-08T11:59:20Z",
+        "conditions": [
+            {
+                "lastProbeTime": "2026-09-08T11:59:20Z",
+                "lastTransitionTime": "2026-09-08T11:59:20Z",
+                "message": "Reached expected number of succeeded pods",
+                "reason": "CompletionsReached",
+                "status": "True",
+                "type": "SuccessCriteriaMet"
+            },
+            {
+                "lastProbeTime": "2026-09-08T11:59:20Z",
+                "lastTransitionTime": "2026-09-08T11:59:20Z",
+                "message": "Reached expected number of succeeded pods",
+                "reason": "CompletionsReached",
+                "status": "True",
+                "type": "Complete"
+            }
+        ],
+        "ready": 0,
+        "startTime": "2026-09-08T11:59:09Z",
+        "succeeded": 1,
+        "terminating": 0,
+        "uncountedTerminatedPods": {}
+    }
+}

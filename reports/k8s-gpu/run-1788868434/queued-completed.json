@@ -1,0 +1,276 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "creationTimestamp": "2026-09-08T11:54:11Z",
+    "finalizers": [
+      "batch.kubernetes.io/job-tracking"
+    ],
+    "generateName": "queued-1788868434-",
+    "generation": 1,
+    "labels": {
+      "batch.kubernetes.io/controller-uid": "2d952362-54c8-4f57-90c5-817cde946f75",
+      "batch.kubernetes.io/job-name": "queued-1788868434",
+      "controller-uid": "2d952362-54c8-4f57-90c5-817cde946f75",
+      "job-name": "queued-1788868434"
+    },
+    "name": "queued-1788868434-c67xr",
+    "namespace": "rs-gpu-tests",
+    "ownerReferences": [
+      {
+        "apiVersion": "batch/v1",
+        "blockOwnerDeletion": true,
+        "controller": true,
+        "kind": "Job",
+        "name": "queued-1788868434",
+        "uid": "2d952362-54c8-4f57-90c5-817cde946f75"
+      }
+    ],
+    "resourceVersion": "6418",
+    "uid": "059db7fa-c54a-4c0a-8455-7be1f17450d3"
+  },
+  "spec": {
+    "activeDeadlineSeconds": 240,
+    "automountServiceAccountToken": false,
+    "containers": [
+      {
+        "command": [
+          "python",
+          "-u",
+          "-c",
+          "import runpy; runpy.run_path('/test/verify_cuda_compute.py',run_name='__main__')"
+        ],
+        "image": "remote-sensing-framework:0.3.0-kmeans1",
+        "imagePullPolicy": "Never",
+        "name": "compute",
+        "resources": {
+          "limits": {
+            "cpu": "1",
+            "memory": "512Mi",
+            "nvidia.com/gpu": "1"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "128Mi",
+            "nvidia.com/gpu": "1"
+          }
+        },
+        "securityContext": {
+          "allowPrivilegeEscalation": false,
+          "capabilities": {
+            "drop": [
+              "ALL"
+            ]
+          },
+          "readOnlyRootFilesystem": true,
+          "seccompProfile": {
+            "type": "RuntimeDefault"
+          }
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/test",
+            "name": "test",
+            "readOnly": true
+          },
+          {
+            "mountPath": "/tmp",
+            "name": "tmp"
+          }
+        ]
+      }
+    ],
+    "dnsPolicy": "ClusterFirst",
+    "enableServiceLinks": true,
+    "nodeName": "rs-lab-control-plane",
+    "preemptionPolicy": "PreemptLowerPriority",
+    "priority": 0,
+    "restartPolicy": "Never",
+    "schedulerName": "default-scheduler",
+    "securityContext": {
+      "runAsGroup": 1000,
+      "runAsNonRoot": true,
+      "runAsUser": 1000
+    },
+    "serviceAccount": "default",
+    "serviceAccountName": "default",
+    "terminationGracePeriodSeconds": 10,
+    "tolerations": [
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      }
+    ],
+    "volumes": [
+      {
+        "configMap": {
+          "defaultMode": 420,
+          "name": "gpu-compute-1788868434"
+        },
+        "name": "test"
+      },
+      {
+        "emptyDir": {
+          "medium": "Memory",
+          "sizeLimit": "64Mi"
+        },
+        "name": "tmp"
+      }
+    ]
+  },
+  "status": {
+    "allocatedResources": {
+      "cpu": "100m",
+      "memory": "128Mi",
+      "nvidia.com/gpu": "1"
+    },
+    "conditions": [
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:54:23Z",
+        "observedGeneration": 1,
+        "status": "False",
+        "type": "PodReadyToStartContainers"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:54:14Z",
+        "observedGeneration": 1,
+        "reason": "PodCompleted",
+        "status": "True",
+        "type": "Initialized"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:54:21Z",
+        "observedGeneration": 1,
+        "reason": "PodCompleted",
+        "status": "False",
+        "type": "Ready"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:54:21Z",
+        "observedGeneration": 1,
+        "reason": "PodCompleted",
+        "status": "False",
+        "type": "ContainersReady"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-09-08T11:54:14Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodScheduled"
+      }
+    ],
+    "containerStatuses": [
+      {
+        "allocatedResources": {
+          "cpu": "100m",
+          "memory": "128Mi",
+          "nvidia.com/gpu": "1"
+        },
+        "allocatedResourcesStatus": [
+          {
+            "name": "nvidia.com/gpu",
+            "resources": [
+              {
+                "health": "Healthy",
+                "resourceID": "GPU-799ca157-e0c7-e842-9d2b-0adaa7959083"
+              }
+            ]
+          }
+        ],
+        "containerID": "containerd://8398b03c4c1d099f615b10235b873057f41f50f8a5588c6883241373f6a045be",
+        "image": "docker.io/library/remote-sensing-framework:0.3.0-kmeans1",
+        "imageID": "docker.io/library/import-2026-09-08@sha256:e7a7d6fc40f0090d3d81063281aa8ffb9fa30f9b7d2b2195352d06b574257307",
+        "lastState": {},
+        "name": "compute",
+        "ready": false,
+        "resources": {
+          "limits": {
+            "cpu": "1",
+            "memory": "512Mi",
+            "nvidia.com/gpu": "1"
+          },
+          "requests": {
+            "cpu": "100m",
+            "memory": "128Mi",
+            "nvidia.com/gpu": "1"
+          }
+        },
+        "restartCount": 0,
+        "started": false,
+        "state": {
+          "terminated": {
+            "containerID": "containerd://8398b03c4c1d099f615b10235b873057f41f50f8a5588c6883241373f6a045be",
+            "exitCode": 0,
+            "finishedAt": "2026-09-08T11:54:21Z",
+            "reason": "Completed",
+            "startedAt": "2026-09-08T11:54:17Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 1000,
+            "supplementalGroups": [
+              1000,
+              44,
+              990
+            ],
+            "uid": 1000
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/test",
+            "name": "test",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          },
+          {
+            "mountPath": "/tmp",
+            "name": "tmp"
+          }
+        ]
+      }
+    ],
+    "hostIP": "172.18.0.2",
+    "hostIPs": [
+      {
+        "ip": "172.18.0.2"
+      }
+    ],
+    "observedGeneration": 1,
+    "phase": "Succeeded",
+    "podIP": "10.244.0.19",
+    "podIPs": [
+      {
+        "ip": "10.244.0.19"
+      }
+    ],
+    "qosClass": "Burstable",
+    "resources": {
+      "limits": {
+        "cpu": "1",
+        "memory": "512Mi"
+      },
+      "requests": {
+        "cpu": "79m",
+        "memory": "128Mi"
+      }
+    },
+    "startTime": "2026-09-08T11:54:14Z"
+  }
+}
