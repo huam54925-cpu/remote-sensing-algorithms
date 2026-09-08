@@ -1,0 +1,5 @@
+TARGET          SOURCE    FSTYPE OPTIONS
+/mnt/robot_disk systemd-1 autofs rw,relatime,fd=66,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=2857
+/mnt/robot_disk /dev/sdb2 ext4   rw,relatime
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb2       916G   13G  858G   2% /mnt/robot_disk

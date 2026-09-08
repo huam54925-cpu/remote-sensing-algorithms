@@ -1,0 +1,553 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T10:51:57Z",
+                "generateName": "rs-example-1788864716-0-",
+                "generation": 1,
+                "labels": {
+                    "batch.kubernetes.io/controller-uid": "9cddc3ca-ec1b-4cff-9d7b-87658bbda0da",
+                    "batch.kubernetes.io/job-name": "rs-example-1788864716-0",
+                    "controller-uid": "9cddc3ca-ec1b-4cff-9d7b-87658bbda0da",
+                    "job-name": "rs-example-1788864716-0"
+                },
+                "name": "rs-example-1788864716-0-t9m6g",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "batch/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Job",
+                        "name": "rs-example-1788864716-0",
+                        "uid": "9cddc3ca-ec1b-4cff-9d7b-87658bbda0da"
+                    }
+                ],
+                "resourceVersion": "804",
+                "uid": "c2cffe46-369c-4d09-b274-3717171426be"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "args": [
+                            "--algorithm",
+                            "KMEANS",
+                            "--input",
+                            "/data/input/kmeans-input.tif",
+                            "--output-dir",
+                            "/data/output",
+                            "--params",
+                            "{\"clusters\":3}"
+                        ],
+                        "image": "remote-sensing-framework:0.3.0-kmeans1",
+                        "imagePullPolicy": "Never",
+                        "name": "algorithm",
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "1Gi"
+                            },
+                            "requests": {
+                                "cpu": "250m",
+                                "memory": "256Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/data/input",
+                                "name": "input",
+                                "readOnly": true
+                            },
+                            {
+                                "mountPath": "/data/output",
+                                "name": "output"
+                            },
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "rs-lab-control-plane",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsGroup": 1000,
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 10,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "hostPath": {
+                            "path": "/rs-input/kmeans-example",
+                            "type": "Directory"
+                        },
+                        "name": "input"
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/rs-output/rs-example-1788864716-0",
+                            "type": "Directory"
+                        },
+                        "name": "output"
+                    },
+                    {
+                        "emptyDir": {
+                            "medium": "Memory",
+                            "sizeLimit": "64Mi"
+                        },
+                        "name": "tmp"
+                    }
+                ]
+            },
+            "status": {
+                "allocatedResources": {
+                    "cpu": "250m",
+                    "memory": "256Mi"
+                },
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:52:14Z",
+                        "observedGeneration": 1,
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:51:58Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:52:13Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:52:13Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:51:57Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "allocatedResources": {
+                            "cpu": "250m",
+                            "memory": "256Mi"
+                        },
+                        "containerID": "containerd://0b7902ff3e72dacc18d6cd97da90db763abbed893c9e954d203da467e6a7ece5",
+                        "image": "docker.io/library/remote-sensing-framework:0.3.0-kmeans1",
+                        "imageID": "docker.io/library/import-2026-09-08@sha256:e7a7d6fc40f0090d3d81063281aa8ffb9fa30f9b7d2b2195352d06b574257307",
+                        "lastState": {},
+                        "name": "algorithm",
+                        "ready": false,
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "1Gi"
+                            },
+                            "requests": {
+                                "cpu": "250m",
+                                "memory": "256Mi"
+                            }
+                        },
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://0b7902ff3e72dacc18d6cd97da90db763abbed893c9e954d203da467e6a7ece5",
+                                "exitCode": 0,
+                                "finishedAt": "2026-09-08T10:52:12Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-09-08T10:52:02Z"
+                            }
+                        },
+                        "user": {
+                            "linux": {
+                                "gid": 1000,
+                                "supplementalGroups": [
+                                    1000
+                                ],
+                                "uid": 1000
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/data/input",
+                                "name": "input",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            },
+                            {
+                                "mountPath": "/data/output",
+                                "name": "output"
+                            },
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "172.18.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.18.0.2"
+                    }
+                ],
+                "observedGeneration": 1,
+                "phase": "Succeeded",
+                "podIP": "10.244.0.5",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.5"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "resources": {
+                    "limits": {
+                        "cpu": "1",
+                        "memory": "1Gi"
+                    },
+                    "requests": {
+                        "cpu": "232m",
+                        "memory": "256Mi"
+                    }
+                },
+                "startTime": "2026-09-08T10:51:58Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2026-09-08T10:51:58Z",
+                "generateName": "rs-example-1788864716-1-",
+                "generation": 1,
+                "labels": {
+                    "batch.kubernetes.io/controller-uid": "95d4ada6-8c21-4fb5-88fe-d64ee68790a8",
+                    "batch.kubernetes.io/job-name": "rs-example-1788864716-1",
+                    "controller-uid": "95d4ada6-8c21-4fb5-88fe-d64ee68790a8",
+                    "job-name": "rs-example-1788864716-1"
+                },
+                "name": "rs-example-1788864716-1-67zf6",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "batch/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Job",
+                        "name": "rs-example-1788864716-1",
+                        "uid": "95d4ada6-8c21-4fb5-88fe-d64ee68790a8"
+                    }
+                ],
+                "resourceVersion": "800",
+                "uid": "58461c46-eb7e-4b28-948d-7041701ddbf8"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "args": [
+                            "--algorithm",
+                            "KMEANS",
+                            "--input",
+                            "/data/input/kmeans-input.tif",
+                            "--output-dir",
+                            "/data/output",
+                            "--params",
+                            "{\"clusters\":3}"
+                        ],
+                        "image": "remote-sensing-framework:0.3.0-kmeans1",
+                        "imagePullPolicy": "Never",
+                        "name": "algorithm",
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "1Gi"
+                            },
+                            "requests": {
+                                "cpu": "250m",
+                                "memory": "256Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/data/input",
+                                "name": "input",
+                                "readOnly": true
+                            },
+                            {
+                                "mountPath": "/data/output",
+                                "name": "output"
+                            },
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "rs-lab-control-plane",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsGroup": 1000,
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 10,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "hostPath": {
+                            "path": "/rs-input/kmeans-example",
+                            "type": "Directory"
+                        },
+                        "name": "input"
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/rs-output/rs-example-1788864716-1",
+                            "type": "Directory"
+                        },
+                        "name": "output"
+                    },
+                    {
+                        "emptyDir": {
+                            "medium": "Memory",
+                            "sizeLimit": "64Mi"
+                        },
+                        "name": "tmp"
+                    }
+                ]
+            },
+            "status": {
+                "allocatedResources": {
+                    "cpu": "250m",
+                    "memory": "256Mi"
+                },
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:52:15Z",
+                        "observedGeneration": 1,
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:51:59Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:52:13Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:52:13Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-09-08T10:51:58Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "allocatedResources": {
+                            "cpu": "250m",
+                            "memory": "256Mi"
+                        },
+                        "containerID": "containerd://5c101aa9055a59e6650b9825196cfa5aafb677b93e83fe046e2a998e89a4b75b",
+                        "image": "docker.io/library/remote-sensing-framework:0.3.0-kmeans1",
+                        "imageID": "docker.io/library/import-2026-09-08@sha256:e7a7d6fc40f0090d3d81063281aa8ffb9fa30f9b7d2b2195352d06b574257307",
+                        "lastState": {},
+                        "name": "algorithm",
+                        "ready": false,
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "1Gi"
+                            },
+                            "requests": {
+                                "cpu": "250m",
+                                "memory": "256Mi"
+                            }
+                        },
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://5c101aa9055a59e6650b9825196cfa5aafb677b93e83fe046e2a998e89a4b75b",
+                                "exitCode": 0,
+                                "finishedAt": "2026-09-08T10:52:12Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-09-08T10:52:03Z"
+                            }
+                        },
+                        "user": {
+                            "linux": {
+                                "gid": 1000,
+                                "supplementalGroups": [
+                                    1000
+                                ],
+                                "uid": 1000
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/data/input",
+                                "name": "input",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            },
+                            {
+                                "mountPath": "/data/output",
+                                "name": "output"
+                            },
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "172.18.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.18.0.2"
+                    }
+                ],
+                "observedGeneration": 1,
+                "phase": "Succeeded",
+                "podIP": "10.244.0.6",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.6"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "resources": {
+                    "limits": {
+                        "cpu": "1",
+                        "memory": "1Gi"
+                    },
+                    "requests": {
+                        "cpu": "232m",
+                        "memory": "256Mi"
+                    }
+                },
+                "startTime": "2026-09-08T10:51:59Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

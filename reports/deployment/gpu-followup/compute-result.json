@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "device": "NVIDIA GeForce GTX 1650",
+  "operation": "float32 vector addition",
+  "backend": "CUDA Driver API + PTX JIT",
+  "cpu_fallback": false,
+  "device_allocation_bytes": 12582996,
+  "runs": [
+    {
+      "seed": 0,
+      "elements": 1048583,
+      "max_absolute_error": 0.0,
+      "launch_and_sync_seconds": 0.0037146570002732915
+    },
+    {
+      "seed": 1,
+      "elements": 1048583,
+      "max_absolute_error": 0.0,
+      "launch_and_sync_seconds": 0.0024659050004629535
+    },
+    {
+      "seed": 2,
+      "elements": 1048583,
+      "max_absolute_error": 0.0,
+      "launch_and_sync_seconds": 0.0049209230000997195
+    }
+  ]
+}

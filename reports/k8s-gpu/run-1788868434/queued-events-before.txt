@@ -1,0 +1,57 @@
+Name:             queued-1788868434-c67xr
+Namespace:        rs-gpu-tests
+Priority:         0
+Service Account:  default
+Node:             <none>
+Labels:           batch.kubernetes.io/controller-uid=2d952362-54c8-4f57-90c5-817cde946f75
+                  batch.kubernetes.io/job-name=queued-1788868434
+                  controller-uid=2d952362-54c8-4f57-90c5-817cde946f75
+                  job-name=queued-1788868434
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    Job/queued-1788868434
+Containers:
+  compute:
+    Image:           remote-sensing-framework:0.3.0-kmeans1
+    Port:            <none>
+    Host Port:       <none>
+    SeccompProfile:  RuntimeDefault
+    Command:
+      python
+      -u
+      -c
+      import runpy; runpy.run_path('/test/verify_cuda_compute.py',run_name='__main__')
+    Limits:
+      cpu:             1
+      memory:          512Mi
+      nvidia.com/gpu:  1
+    Requests:
+      cpu:             100m
+      memory:          128Mi
+      nvidia.com/gpu:  1
+    Environment:       <none>
+    Mounts:
+      /test from test (ro)
+      /tmp from tmp (rw)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  test:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      gpu-compute-1788868434
+    Optional:  false
+  tmp:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      Memory
+    SizeLimit:   64Mi
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  0s    default-scheduler  0/1 nodes are available: 1 Insufficient nvidia.com/gpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.

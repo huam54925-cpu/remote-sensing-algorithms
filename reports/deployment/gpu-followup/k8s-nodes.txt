@@ -1,0 +1,2 @@
+NAME                   STATUS   ROLES           AGE   VERSION
+rs-lab-control-plane   Ready    control-plane   35m   v1.36.4

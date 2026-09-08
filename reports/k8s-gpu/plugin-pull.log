@@ -1,0 +1,94 @@
+v0.20.0: Pulling from nvidia/k8s-device-plugin
+c172f21841df: Pulling fs layer
+d6b1b89eccac: Pulling fs layer
+99515e7b4d35: Pulling fs layer
+99ba982a9142: Pulling fs layer
+7c12895b777b: Pulling fs layer
+cac2ae0193cb: Pulling fs layer
+dd64bf2dd177: Pulling fs layer
+2780920e5dbf: Pulling fs layer
+f3cdd3435d07: Pulling fs layer
+bb9340219a6d: Pulling fs layer
+bdfd7f7e5bf6: Pulling fs layer
+3214acf345c0: Pulling fs layer
+656047634ac8: Pulling fs layer
+2d4d7adf6272: Pulling fs layer
+88d59a2387a1: Pulling fs layer
+00178db943e3: Pulling fs layer
+ba7370fde634: Pulling fs layer
+1eed391ea893: Pulling fs layer
+f850f7ac92a2: Pulling fs layer
+4f84f1c83c93: Pulling fs layer
+b839dfae01f6: Pulling fs layer
+52630fc75a18: Pulling fs layer
+d748a06a54b6: Pulling fs layer
+140a5458fdf1: Pulling fs layer
+bd8962e29291: Pulling fs layer
+36ce036fc2f3: Pulling fs layer
+8d3c183112ef: Pulling fs layer
+cf397222899a: Pulling fs layer
+1225c6e69d9f: Pulling fs layer
+ebddc55facdc: Pulling fs layer
+7c12895b777b: Download complete
+99515e7b4d35: Download complete
+c172f21841df: Download complete
+dd64bf2dd177: Download complete
+cac2ae0193cb: Download complete
+bb9340219a6d: Download complete
+3214acf345c0: Download complete
+656047634ac8: Download complete
+f3cdd3435d07: Download complete
+88d59a2387a1: Download complete
+00178db943e3: Download complete
+2780920e5dbf: Download complete
+99ba982a9142: Download complete
+d6b1b89eccac: Download complete
+1eed391ea893: Download complete
+b839dfae01f6: Download complete
+d748a06a54b6: Download complete
+52630fc75a18: Download complete
+bdfd7f7e5bf6: Download complete
+1eed391ea893: Pull complete
+ebddc55facdc: Download complete
+c172f21841df: Pull complete
+99515e7b4d35: Pull complete
+99ba982a9142: Pull complete
+d6b1b89eccac: Pull complete
+2780920e5dbf: Pull complete
+7c12895b777b: Pull complete
+3214acf345c0: Pull complete
+52630fc75a18: Pull complete
+dd64bf2dd177: Pull complete
+b839dfae01f6: Pull complete
+ebddc55facdc: Pull complete
+bdfd7f7e5bf6: Pull complete
+ba7370fde634: Download complete
+bd8962e29291: Download complete
+f850f7ac92a2: Download complete
+4f84f1c83c93: Download complete
+cf397222899a: Download complete
+8d3c183112ef: Download complete
+2d4d7adf6272: Download complete
+2d4d7adf6272: Pull complete
+cf397222899a: Pull complete
+bd8962e29291: Pull complete
+cac2ae0193cb: Pull complete
+ba7370fde634: Pull complete
+f3cdd3435d07: Pull complete
+4f84f1c83c93: Pull complete
+88d59a2387a1: Pull complete
+00178db943e3: Pull complete
+656047634ac8: Pull complete
+f850f7ac92a2: Pull complete
+bb9340219a6d: Pull complete
+d748a06a54b6: Pull complete
+36ce036fc2f3: Download complete
+1225c6e69d9f: Download complete
+1225c6e69d9f: Pull complete
+140a5458fdf1: Download complete
+140a5458fdf1: Pull complete
+8d3c183112ef: Pull complete
+36ce036fc2f3: Pull complete
+Digest: sha256:a61ba9fd8efb82f3a79f877f7580e02c1e8e7593f62473644bc9c79e315c3312
+Status: Downloaded newer image for nvcr.io/nvidia/k8s-device-plugin:v0.20.0
+nvcr.io/nvidia/k8s-device-plugin:v0.20.0

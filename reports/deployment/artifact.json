@@ -1,0 +1,7 @@
+{
+  "image": "remote-sensing-framework:0.3.0-kmeans1",
+  "archive_bytes": 166752617,
+  "archive_sha256": "ca22eeeb8d844708900a580b0c4d5070a33d018c553db57c782e51cd3d1cec63",
+  "platform": "linux/amd64",
+  "formal_security_acceptance": false
+}

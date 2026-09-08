@@ -1,0 +1,7 @@
+# Local kind: NVIDIA runtime is used only to bootstrap the device plugin.
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.nvidia-bootstrap]
+  runtime_type = "io.containerd.runc.v2"
+  base_runtime_spec = "/etc/containerd/cri-base.json"
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.nvidia-bootstrap.options]
+    BinaryName = "/usr/bin/nvidia-container-runtime"
+    SystemdCgroup = true

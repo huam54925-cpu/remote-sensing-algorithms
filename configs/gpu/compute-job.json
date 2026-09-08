@@ -1,0 +1,86 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "generateName": "rs-cuda-check-",
+    "namespace": "rs-gpu-tests"
+  },
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 120,
+    "template": {
+      "spec": {
+        "restartPolicy": "Never",
+        "terminationGracePeriodSeconds": 10,
+        "automountServiceAccountToken": false,
+        "securityContext": {
+          "runAsUser": 1000,
+          "runAsGroup": 1000,
+          "runAsNonRoot": true
+        },
+        "containers": [
+          {
+            "name": "compute",
+            "image": "remote-sensing-framework:0.3.0-kmeans1",
+            "imagePullPolicy": "Never",
+            "command": [
+              "python",
+              "-u",
+              "/test/verify_cuda_compute.py"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "100m",
+                "memory": "128Mi",
+                "nvidia.com/gpu": 1
+              },
+              "limits": {
+                "cpu": "1",
+                "memory": "512Mi",
+                "nvidia.com/gpu": 1
+              }
+            },
+            "securityContext": {
+              "allowPrivilegeEscalation": false,
+              "readOnlyRootFilesystem": true,
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              },
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "test",
+                "mountPath": "/test",
+                "readOnly": true
+              },
+              {
+                "name": "tmp",
+                "mountPath": "/tmp"
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "test",
+            "configMap": {
+              "name": "rs-cuda-compute"
+            }
+          },
+          {
+            "name": "tmp",
+            "emptyDir": {
+              "medium": "Memory",
+              "sizeLimit": "64Mi"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

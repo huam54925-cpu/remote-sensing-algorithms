@@ -1,0 +1,14 @@
+import 2026 09 08@sha256:4a364a8b72a7820	saved	
+application/vnd.oci.image.index.v1+json sha256:4a364a8b72a7820a582627ee55c9ceccbb42f8c1cdc3480abb0d50c5186d9106
+Importing	elapsed: 18.6s	total:   0.0 B	(0.0 B/s)	
+import 2026 09 08@sha256:4a364a8b72a7820	saved	
+nvcr.io/nvidia/k8s device plugin:v0.20.0	saved	
+application/vnd.oci.image.index.v1+json sha256:4a364a8b72a7820a582627ee55c9ceccbb42f8c1cdc3480abb0d50c5186d9106
+application/vnd.docker.distribution.manifest.v2+json sha256:1de09dda8d1c179fe84e280f28a48a75c9a1a529d90eefcee1f80c012ac11640
+Importing	elapsed: 18.7s	total:   0.0 B	(0.0 B/s)	
+nvcr.io/nvidia/k8s-device-plugin@sha256:1de09dda8d1c179fe84e280f28a48a75c9a1a529d90eefcee1f80c012ac11640
+runtimeclass.node.k8s.io/nvidia-bootstrap unchanged
+daemonset.apps/nvidia-device-plugin created
+Waiting for daemon set "nvidia-device-plugin" rollout to finish: 0 of 1 updated pods are available...
+daemon set "nvidia-device-plugin" successfully rolled out
+PASS: nvidia.com/gpu=1
