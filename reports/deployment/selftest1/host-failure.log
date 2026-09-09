@@ -1,0 +1,2 @@
+RuntimeError: Image unavailable; run docker pull first
+FAIL: MACHINE TEST; reports=/mnt/robot_disk/remote_sensing_project/outputs/selftest-release/machine-_168a7o6

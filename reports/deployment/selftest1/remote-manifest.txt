@@ -1,0 +1,15 @@
+Name:      ghcr.io/huam54925-cpu/remote-sensing-algorithms@sha256:8f3a329de34ddbfbe69a7ec8af6467a28acf33931d4fc72115a5373022ea7836
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:8f3a329de34ddbfbe69a7ec8af6467a28acf33931d4fc72115a5373022ea7836
+           
+Manifests: 
+  Name:        ghcr.io/huam54925-cpu/remote-sensing-algorithms@sha256:bc505686c2363286eee0535481366bb2edc312babf1b8eec077361149405a416
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/amd64
+               
+  Name:        ghcr.io/huam54925-cpu/remote-sensing-algorithms@sha256:d812dae26a7f2e66528f2ef94d33cb77541db8f5824cf61d43260023e151d6ed
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    vnd.docker.reference.digest: sha256:bc505686c2363286eee0535481366bb2edc312babf1b8eec077361149405a416
+    vnd.docker.reference.type:   attestation-manifest

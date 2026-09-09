@@ -31,6 +31,7 @@ COPY --from=build /install/ /usr/local/
 RUN python -c 'import rasterio, numpy, sklearn, ssl, sqlite3; print(rasterio.__version__)' && \
     python -m pip uninstall -y pip
 COPY scripts/healthcheck.sh /app/healthcheck.sh
+COPY scripts/check-host.py /app/check-host.py
 RUN test -x /bin/sh && mkdir -p /data/input /data/output /data/work && chmod 755 /app/healthcheck.sh
 USER 10001:10001
 # 批处理无监听端口。只读根文件系统必须由运行配置实施。

@@ -1,0 +1,7 @@
+# Extend the exact image already tested on the second machine; retain its dependencies.
+FROM ghcr.io/huam54925-cpu/remote-sensing-algorithms@sha256:e9bcee28fc600022a4a919897528e703e1c30d14730b32679c57a4c9a7ea3c89
+LABEL org.opencontainers.image.revision="selftest1" \
+      org.opencontainers.image.source="https://github.com/huam54925-cpu/remote-sensing-algorithms" \
+      org.opencontainers.image.description="MNDWI and KMeans CPU examples with offline self-test and durable reports"
+COPY src/ /app/src/
+COPY scripts/check-host.py /app/check-host.py

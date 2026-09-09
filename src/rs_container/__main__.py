@@ -46,10 +46,15 @@ def main(argv=None):
     p.add_argument("--task-id", default=task_id, help="任务 ID / RS_TASK_ID；默认生成 UUID")
     p.add_argument("--list", action="store_true", help="列出接入状态")
     p.add_argument("--healthcheck", action="store_true", help="仅检查 Python 和入口；不代表算法或挂载健康")
+    p.add_argument("--self-test", action="store_true", help="离线自检 smoke、KMEANS、MNDWI，生成 JSON/Markdown 报告与测试数据")
+    p.add_argument("--report-dir", default="/tmp/rs-reports", help="自检报告父目录；持久化请挂载宿主目录")
     p.add_argument("--version", action="version", version=__version__)
     try:
         args = p.parse_args(argv)
         task_id = args.task_id
+        if args.self_test:
+            from .selftest import run
+            return run(args.report_dir)
         if args.list:
             status = dict.fromkeys(ALGORITHMS, "not_implemented")
             status["MNDWI"] = "implemented_example"

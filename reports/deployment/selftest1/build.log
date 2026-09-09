@@ -1,0 +1,52 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.selftest
+#1 transferring dockerfile: 600B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for ghcr.io/huam54925-cpu/remote-sensing-algorithms@sha256:e9bcee28fc600022a4a919897528e703e1c30d14730b32679c57a4c9a7ea3c89
+#2 ...
+
+#3 [auth] huam54925-cpu/remote-sensing-algorithms:pull token for ghcr.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for ghcr.io/huam54925-cpu/remote-sensing-algorithms@sha256:e9bcee28fc600022a4a919897528e703e1c30d14730b32679c57a4c9a7ea3c89
+#2 DONE 3.9s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 305B done
+#4 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 21.60kB 0.1s done
+#5 DONE 0.5s
+
+#6 [1/3] FROM ghcr.io/huam54925-cpu/remote-sensing-algorithms@sha256:e9bcee28fc600022a4a919897528e703e1c30d14730b32679c57a4c9a7ea3c89
+#6 resolve ghcr.io/huam54925-cpu/remote-sensing-algorithms@sha256:e9bcee28fc600022a4a919897528e703e1c30d14730b32679c57a4c9a7ea3c89
+#6 resolve ghcr.io/huam54925-cpu/remote-sensing-algorithms@sha256:e9bcee28fc600022a4a919897528e703e1c30d14730b32679c57a4c9a7ea3c89 0.6s done
+#6 DONE 1.7s
+
+#7 [2/3] COPY src/ /app/src/
+#7 DONE 1.2s
+
+#8 [3/3] COPY scripts/check-host.py /app/check-host.py
+#8 DONE 1.2s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 3.2s done
+#9 exporting manifest sha256:bc505686c2363286eee0535481366bb2edc312babf1b8eec077361149405a416
+#9 exporting manifest sha256:bc505686c2363286eee0535481366bb2edc312babf1b8eec077361149405a416 0.3s done
+#9 exporting config sha256:607e9e4240d3a91586c7b5600fff20afc77416f89441f6455f21e63ed5de18a7
+#9 exporting config sha256:607e9e4240d3a91586c7b5600fff20afc77416f89441f6455f21e63ed5de18a7 0.3s done
+#9 exporting attestation manifest sha256:d812dae26a7f2e66528f2ef94d33cb77541db8f5824cf61d43260023e151d6ed
+#9 exporting attestation manifest sha256:d812dae26a7f2e66528f2ef94d33cb77541db8f5824cf61d43260023e151d6ed 0.6s done
+#9 exporting manifest list sha256:8f3a329de34ddbfbe69a7ec8af6467a28acf33931d4fc72115a5373022ea7836
+#9 exporting manifest list sha256:8f3a329de34ddbfbe69a7ec8af6467a28acf33931d4fc72115a5373022ea7836 0.3s done
+#9 naming to docker.io/library/remote-sensing-framework:0.3.0-selftest1
+#9 naming to docker.io/library/remote-sensing-framework:0.3.0-selftest1 0.1s done
+#9 unpacking to docker.io/library/remote-sensing-framework:0.3.0-selftest1
+#9 unpacking to docker.io/library/remote-sensing-framework:0.3.0-selftest1 0.8s done
+#9 naming to ghcr.io/huam54925-cpu/remote-sensing-algorithms:0.3.0-selftest1 0.1s done
+#9 unpacking to ghcr.io/huam54925-cpu/remote-sensing-algorithms:0.3.0-selftest1 0.1s done
+#9 DONE 6.3s

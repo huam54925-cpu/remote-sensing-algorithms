@@ -1,0 +1,6 @@
+PASS: smoke
+PASS: KMEANS
+PASS: MNDWI
+PASS: missing_input
+PASS: ALL ALGORITHM CHECKS; report=/reports/selftest-yvc_l8ms
+PASS: MACHINE TEST; reports=/mnt/robot_disk/remote_sensing_project/outputs/selftest-release/machine-kzh55ys8
