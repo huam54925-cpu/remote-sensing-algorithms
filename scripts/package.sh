@@ -9,8 +9,8 @@ PACKAGE_DIR=$(realpath "$PACKAGE_DIR")
 cp -r src scripts tests configs deps "$PACKAGE_DIR/"
 mkdir -p "$PACKAGE_DIR/docs" "$PACKAGE_DIR/reports" "$PACKAGE_DIR/data/input/kmeans-example" \
  "$PACKAGE_DIR/outputs" "$PACKAGE_DIR/work"
-cp README.md VERSION Dockerfile requirements.lock .dockerignore .env.example "$PACKAGE_DIR/"
-cp docs/deployment-guide.md docs/kubernetes-local.md docs/preparation-plan.md docs/algorithm-intake.md docs/third-party-kmeans.md docs/CHANGELOG.md "$PACKAGE_DIR/docs/"
+cp README.md VERSION Dockerfile Dockerfile.selftest requirements.lock .dockerignore .env.example "$PACKAGE_DIR/"
+cp docs/image-selftest.md docs/deployment-guide.md docs/kubernetes-local.md docs/preparation-plan.md docs/algorithm-intake.md docs/third-party-kmeans.md docs/CHANGELOG.md "$PACKAGE_DIR/docs/"
 cp -r reports/deployment "$PACKAGE_DIR/reports/"
 cp data/input/smoke.txt "$PACKAGE_DIR/data/input/"
 docker run --rm --network none --user "$(id -u):$(id -g)" \

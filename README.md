@@ -1,5 +1,13 @@
 # 遥感算法容器封装框架 0.3.0
 
+## 交付报告（2026-09-09）
+
+[PDF 交付与异机验证报告](output/pdf/remote-sensing-delivery-report-20260909.pdf) 汇总本次修改、GHCR/Release 发布及新版 Vultr 自检通过结果。[Release 下载](https://github.com/huam54925-cpu/remote-sensing-algorithms/releases/tag/v0.3.0-selftest1) 提供离线镜像与检查脚本。
+
+## 镜像内置自检
+
+`0.3.0-selftest1` 提供 `--self-test`，并附带可从镜像提取的宿主机检查脚本。一条测试命令保存机器状态、逐项结论、输入输出、运行日志和校验文件。详见 [自检与机器验收报告](docs/image-selftest.md)。
+
 ## 操作手册 1.1
 
 详细操作手册共 42 页、12 章，包含配置填写、执行命令、参数说明、终端输出和完成判定。

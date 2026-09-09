@@ -13,3 +13,6 @@
 deps/debs/partial
 deps/debs/lock
 **/__pycache__/
+
+!Dockerfile.selftest
+!scripts/check-host.py
